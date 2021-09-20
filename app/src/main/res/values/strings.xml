@@ -1,3 +1,9 @@
 <resources>
     <string name="app_name">Xerox</string>
+    <string name="et_userName">Enter User name</string>
+    <string name="et_Phone">Phone No</string>
+    <string name="et_Email">Email Address</string>
+    <string name="et_Password">Password</string>
+    <string name="btn_register">Register</string>
+    <string name="tv_login">Already a user? Login</string>
 </resources>
