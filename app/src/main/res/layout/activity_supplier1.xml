@@ -8,8 +8,8 @@
 
     <TextView
         android:id="@+id/tv_hi"
-        android:layout_width="70dp"
-        android:layout_height="37dp"
+        android:layout_width="40dp"
+        android:layout_height="33dp"
         android:layout_marginStart="10dp"
         android:layout_marginLeft="10dp"
         android:layout_marginTop="59dp"
@@ -23,7 +23,7 @@
         android:id="@+id/et_supName"
         android:layout_width="206dp"
         android:layout_height="43dp"
-        android:layout_marginTop="49dp"
+        android:layout_marginTop="48dp"
         android:layout_marginEnd="125dp"
         android:layout_marginRight="125dp"
         android:ems="10"
@@ -32,6 +32,61 @@
         android:textColor="#000000"
         android:textSize="20sp"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toEndOf="@+id/tv_hi"
         app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/imageView3"
+        android:layout_width="386dp"
+        android:layout_height="217dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_supActy1"
+        app:srcCompat="@drawable/su1" />
+
+    <TextView
+        android:id="@+id/tv_supActy1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="63dp"
+        android:text="@string/tv_supActy1"
+        android:textColor="#000000"
+        android:textSize="30sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/et_supName" />
+
+    <Button
+        android:id="@+id/btn_fruits"
+        android:layout_width="124dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="36dp"
+        android:layout_marginLeft="36dp"
+        android:onClick="FruitsPage"
+        android:text="@string/btn_fruits"
+        android:textColor="#000000"
+        android:textSize="16sp"
+        app:backgroundTint="#F1D620"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView3" />
+
+    <Button
+        android:id="@+id/btn_veg"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="72dp"
+        android:layout_marginLeft="72dp"
+        android:layout_marginEnd="36dp"
+        android:layout_marginRight="36dp"
+        android:onClick="VegPage"
+        android:text="@string/btn_veg"
+        android:textColor="#000000"
+        android:textSize="16sp"
+        app:backgroundTint="#F1D620"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/btn_fruits"
+        app:layout_constraintTop_toBottomOf="@+id/imageView3" />
 </androidx.constraintlayout.widget.ConstraintLayout>
