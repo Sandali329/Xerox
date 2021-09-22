@@ -17,4 +17,32 @@
     <string name="tv_supActy1">What do you supply?</string>
     <string name="btn_fruits">Fruits</string>
     <string name="btn_veg">Vegetables</string>
+
+
+
+    <string name="title_activity_tabbed">tabbed</string>
+    <string name="tab_text_1">Tab 1</string>
+    <string name="tab_text_2">Tab 2</string>
+    <string name="Vcode">V10</string>
+    <string name="Vname">Carrot</string>
+    <string name="Vprice">Rs 100</string>
+    <string name="ADDVbtn">ADD</string>
+    <string name="VIEWVbtn">VIEW</string>
+    <string name="Fcode">F10</string>
+    <string name="Fname">Apple</string>
+    <string name="Fprice">Rs 100</string>
+    <string name="ADDFbtn">ADD</string>
+    <string name="VIEWFbtn" >VIEW</string>
+    <string name="stock1">CARROT</string>
+    <string name="stockqty">10 KG</string>
+    <string name="viewFcode">F10</string>
+    <string name="viewFname">Apple</string>
+    <string name="viewFprice">Rs 100</string>
+    <string name="editFbtn">EDIT</string>
+    <string name="deleteFbtn">DELETE</string>
+    <string name="viewVcode">V10</string>
+    <string name="viewVname">Carrot</string>
+    <string name="viewVprice">Rs !00</string>
+    <string name="editVbtn">EDIT</string>
+    <string name="deleteVbtn">DELETE</string>
 </resources>
