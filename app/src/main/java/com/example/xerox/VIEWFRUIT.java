@@ -42,6 +42,9 @@ public class VIEWFRUIT extends AppCompatActivity implements fruitRVadaptor.fruit
         fruitRV.setLayoutManager(new LinearLayoutManager(this));
         fruitRV.setAdapter(fruitRVadaptor);
         getallfruits();
+
+
+
     }
 private void getallfruits(){
         fruitarraylist.clear();

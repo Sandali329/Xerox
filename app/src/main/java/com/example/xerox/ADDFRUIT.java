@@ -20,7 +20,7 @@ public class ADDFRUIT extends AppCompatActivity {
 
     public Button viewfruit, addfruit;
 
-    private EditText fcode, fname, fprice;
+    private EditText fcode, fname, fprice,fcusprice;
     private FirebaseDatabase db;
     DatabaseReference fruitref;
 
@@ -31,6 +31,7 @@ public class ADDFRUIT extends AppCompatActivity {
         fcode.setText("");
         fname.setText("");
         fprice.setText("");
+        fcusprice.setText("");
 
     }
 
@@ -58,6 +59,7 @@ public class ADDFRUIT extends AppCompatActivity {
         fcode = findViewById(R.id.Fcode);
         fname = findViewById(R.id.Fname);
         fprice = findViewById(R.id.Fprice);
+        fcusprice=findViewById(R.id.Fcusprice);
         addfruit = findViewById(R.id.addFbtn);
 
         db = FirebaseDatabase.getInstance();
@@ -69,8 +71,8 @@ public class ADDFRUIT extends AppCompatActivity {
                 String Fcode = fcode.getText().toString();
                 String Fname = fname.getText().toString();
                 String Fprice = fprice.getText().toString();
-
-                fruit fruit = new fruit(Fcode, Fname, Fprice);
+                String Fcusprice=fcusprice.getText().toString();
+                fruit fruit = new fruit(Fcode, Fname, Fprice,Fcusprice);
                 fruitref.addValueEventListener(new ValueEventListener() {
                     @Override
                     public void onDataChange(@NonNull DataSnapshot snapshot) {

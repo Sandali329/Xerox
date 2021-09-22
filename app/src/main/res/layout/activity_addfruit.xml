@@ -61,11 +61,10 @@
         android:layout_marginLeft="50dp"
         android:layout_marginEnd="151dp"
         android:layout_marginRight="151dp"
-        android:layout_marginBottom="26dp"
         android:ems="10"
         android:inputType="textPersonName"
-        app:layout_constraintBottom_toTopOf="@+id/textView13"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView12" />
 
@@ -106,20 +105,15 @@
 
     <TextView
         android:id="@+id/textView12"
-        android:layout_width="106dp"
-        android:layout_height="24dp"
+        android:layout_width="182dp"
+        android:layout_height="28dp"
         android:layout_marginStart="50dp"
         android:layout_marginLeft="50dp"
-        android:layout_marginTop="17dp"
 
-        android:layout_marginEnd="255dp"
-        android:layout_marginRight="255dp"
-        android:text="PRICE"
+        android:layout_marginTop="7dp"
+        android:text="SUPPLIER PRICE"
         android:textColor="@color/black"
         android:textSize="17sp"
-        app:layout_constraintBottom_toTopOf="@+id/Fprice"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/Fname" />
 
@@ -129,7 +123,6 @@
         android:layout_height="29dp"
         android:layout_marginStart="50dp"
         android:layout_marginLeft="50dp"
-        android:layout_marginTop="12dp"
 
         android:layout_marginEnd="180dp"
         android:layout_marginRight="180dp"
@@ -139,7 +132,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/Fprice" />
+        tools:layout_editor_absoluteY="399dp" />
 
     <ImageView
         android:id="@+id/idfruitimage"
@@ -149,9 +142,7 @@
         android:layout_marginLeft="50dp"
         android:layout_marginEnd="218dp"
         android:layout_marginRight="218dp"
-        android:layout_marginBottom="30dp"
         android:scaleType="centerInside"
-        app:layout_constraintBottom_toTopOf="@+id/addVbtn"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
@@ -216,6 +207,31 @@
         app:backgroundTint="@color/darkyellow"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/idfruitimage" />
+
+    <EditText
+        android:id="@+id/Fcusprice"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="151dp"
+        android:layout_marginRight="151dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:textColor="@color/black"
+        android:textSize="17sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        tools:layout_editor_absoluteY="358dp" />
+
+    <TextView
+        android:id="@+id/textView16"
+        android:layout_width="216dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="50dp"
+        android:layout_marginLeft="50dp"
+        android:text="CUSTOMER PRICE"
+        android:textColor="@color/black"
+        android:textSize="17sp"
+        app:layout_constraintBottom_toTopOf="@+id/Fcusprice"
+        app:layout_constraintStart_toStartOf="parent" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

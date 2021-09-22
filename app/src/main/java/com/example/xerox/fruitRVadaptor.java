@@ -41,7 +41,10 @@ public class fruitRVadaptor extends RecyclerView.Adapter<fruitRVadaptor.Viewhold
     public void onBindViewHolder(@NonNull @NotNull fruitRVadaptor.Viewholder holder, int position) {
 fruit fruit=fruitArrayList.get(position);
 holder.fruitnameTV.setText(fruit.getFname());
-holder.fruitpriceTV.setText("RS "+fruit.getFprice());
+holder.fruitpriceTV.setText("RS "+fruit.getFprice()+"  Per 250g");
+
+
+
 
 setanimation(holder.itemView,position);
 holder.itemView.setOnClickListener(new View.OnClickListener() {
