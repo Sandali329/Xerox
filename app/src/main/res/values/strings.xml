@@ -14,4 +14,7 @@
     <string name="btn_signin">Sign in</string>
     <string name="tv_mainpage">Already a user? Login</string>
     <string name="et_supName" />
+    <string name="tv_supActy1">What do you supply?</string>
+    <string name="btn_fruits">Fruits</string>
+    <string name="btn_veg">Vegetables</string>
 </resources>
