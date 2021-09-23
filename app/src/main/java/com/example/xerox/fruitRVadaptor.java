@@ -39,25 +39,28 @@ public class fruitRVadaptor extends RecyclerView.Adapter<fruitRVadaptor.Viewhold
 
     @Override
     public void onBindViewHolder(@NonNull @NotNull fruitRVadaptor.Viewholder holder, int position) {
-fruit fruit=fruitArrayList.get(position);
-holder.fruitnameTV.setText(fruit.getFname());
-holder.fruitpriceTV.setText("RS "+fruit.getFprice());
+        fruit fruit=fruitArrayList.get(position);
+        holder.fruitnameTV.setText(fruit.getFname());
+        holder.fruitpriceTV.setText("RS "+fruit.getFprice()+"  Per 250g");
 
-setanimation(holder.itemView,position);
-holder.itemView.setOnClickListener(new View.OnClickListener() {
-    @Override
-    public void onClick(View view) {
-        fruitclickinterface.onfruitclick(position);
+
+
+
+        setanimation(holder.itemView,position);
+        holder.itemView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                fruitclickinterface.onfruitclick(position);
+            }
+        });
     }
-});
+    private void setanimation(View itemview,int position){
+        if(position>laspos){
+            Animation animation= AnimationUtils.loadAnimation(context, android.R.anim.slide_in_left);
+            itemview.setAnimation(animation);
+            laspos=position;
+        }
     }
-private void setanimation(View itemview,int position){
-if(position>laspos){
-    Animation animation= AnimationUtils.loadAnimation(context, android.R.anim.slide_in_left);
-    itemview.setAnimation(animation);
-    laspos=position;
-}
-}
     @Override
     public int getItemCount() {
         return fruitArrayList.size();

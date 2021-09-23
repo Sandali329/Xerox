@@ -7,8 +7,13 @@ import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import android.os.Bundle;
+import android.view.LayoutInflater;
+import android.view.View;
 import android.widget.RelativeLayout;
+import android.widget.TextView;
 
+import com.google.android.material.bottomsheet.BottomSheetBehavior;
+import com.google.android.material.bottomsheet.BottomSheetDialog;
 import com.google.firebase.database.ChildEventListener;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
@@ -25,7 +30,7 @@ public class VIEWFRUIT extends AppCompatActivity implements fruitRVadaptor.fruit
     private FirebaseDatabase db;
     private DatabaseReference fruitref;
     private ArrayList<fruit>fruitarraylist;
-    private RelativeLayout viewfruitRL;
+    private RelativeLayout viewfruitRL,bottomsheetRL;
     private fruitRVadaptor fruitRVadaptor;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -38,12 +43,14 @@ public class VIEWFRUIT extends AppCompatActivity implements fruitRVadaptor.fruit
         fruitarraylist=new ArrayList<>();
         viewfruitRL=findViewById(R.id.idRLfruit);
 
+        bottomsheetRL=findViewById(R.id.bottomsheetid);
+
         fruitRVadaptor=new fruitRVadaptor(fruitarraylist,this,this);
         fruitRV.setLayoutManager(new LinearLayoutManager(this));
         fruitRV.setAdapter(fruitRVadaptor);
         getallfruits();
     }
-private void getallfruits(){
+    private void getallfruits(){
         fruitarraylist.clear();
         fruitref.addChildEventListener(new ChildEventListener() {
             @Override
@@ -72,9 +79,22 @@ private void getallfruits(){
 
             }
         });
-}
+    }
     @Override
     public void onfruitclick(int position) {
+        displayborromsheet(fruitarraylist.get(position));
+    }
 
+    private void displayborromsheet(fruit fruit){
+        final BottomSheetDialog bottomSheetDialog=new BottomSheetDialog(this);
+        View layout= LayoutInflater.from(this).inflate(R.layout.activity_sup_item_add,bottomsheetRL);
+        bottomSheetDialog.setContentView(layout);
+        bottomSheetDialog.show();
+        bottomSheetDialog.getBehavior().setState(BottomSheetBehavior.STATE_EXPANDED);
+        TextView Fname=layout.findViewById(R.id.idfname);
+        TextView Fprice=layout.findViewById(R.id.idfprice);
+
+        Fname.setText(fruit.getFname());
+        Fprice.setText(fruit.getFprice());
     }
 }
