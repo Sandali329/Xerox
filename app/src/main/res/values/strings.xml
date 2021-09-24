@@ -11,4 +11,5 @@
     <string name="et_email">Email</string>
     <string name="et_password">Password</string>
     <string name="btn_Creg">Register Customer</string>
+    <string name="btn_show">Show profile</string>
 </resources>
