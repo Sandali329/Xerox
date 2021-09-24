@@ -20,7 +20,7 @@ public class ADDFRUIT extends AppCompatActivity {
 
     public Button viewfruit, addfruit;
 
-    private EditText fcode, fname, fprice,fcusprice;
+    private EditText fcode, fname, fprice,fcusprice,fimglink;
     private FirebaseDatabase db;
     DatabaseReference fruitref;
 
@@ -32,6 +32,7 @@ public class ADDFRUIT extends AppCompatActivity {
         fname.setText("");
         fprice.setText("");
         fcusprice.setText("");
+        fimglink.setText("");
 
     }
 
@@ -48,7 +49,7 @@ public class ADDFRUIT extends AppCompatActivity {
         viewfruit.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(ADDFRUIT.this, VIEWFRUIT.class);
+                Intent intent = new Intent(ADDFRUIT.this, ADMINVIEWFRUITS.class);
                 startActivity(intent);
 
 
@@ -60,6 +61,7 @@ public class ADDFRUIT extends AppCompatActivity {
         fname = findViewById(R.id.Fname);
         fprice = findViewById(R.id.Fprice);
         fcusprice=findViewById(R.id.Fcusprice);
+        fimglink=findViewById(R.id.fimglink);
         addfruit = findViewById(R.id.addFbtn);
 
         db = FirebaseDatabase.getInstance();
@@ -72,7 +74,8 @@ public class ADDFRUIT extends AppCompatActivity {
                 String Fname = fname.getText().toString();
                 String Fprice = fprice.getText().toString();
                 String Fcusprice=fcusprice.getText().toString();
-                fruit fruit = new fruit(Fcode, Fname, Fprice,Fcusprice);
+                String Fimglink=fimglink.getText().toString();
+                fruit fruit = new fruit(Fcode, Fname, Fprice,Fcusprice,Fimglink);
                 fruitref.addValueEventListener(new ValueEventListener() {
                     @Override
                     public void onDataChange(@NonNull DataSnapshot snapshot) {

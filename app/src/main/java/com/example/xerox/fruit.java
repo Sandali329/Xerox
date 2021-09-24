@@ -8,6 +8,7 @@ public class fruit implements Parcelable {
     private String Fname;
     private String Fprice;
     private String Fcusprice;
+    private String Fimglink;
 
 
     public fruit() {
@@ -18,6 +19,7 @@ public class fruit implements Parcelable {
         Fname = in.readString();
         Fprice = in.readString();
         Fcusprice=in.readString();
+        Fimglink=in.readString();
     }
 
     public static final Creator<fruit> CREATOR = new Creator<fruit>() {
@@ -32,11 +34,12 @@ public class fruit implements Parcelable {
         }
     };
 
-    public fruit(String fcode, String fname, String fprice,String fcusprice) {
+    public fruit(String fcode, String fname, String fprice,String fcusprice,String fimglink) {
 this.Fcode=fcode;
 this.Fname=fname;
 this.Fprice=fprice;
 this.Fcusprice=fcusprice;
+this.Fimglink=fimglink;
     }
 
     public String getFcode() {
@@ -70,6 +73,15 @@ this.Fcusprice=fcusprice;
     public void setFcusprice(String Fcusprice) {
         this.Fcusprice = Fcusprice;
     }
+
+    public String getFimglink() {
+        return Fimglink;
+    }
+
+    public void setFimglink(String Fimglink) {
+        this.Fimglink = Fimglink;
+    }
+
 
 
     @Override

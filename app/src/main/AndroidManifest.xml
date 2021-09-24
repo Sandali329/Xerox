@@ -9,7 +9,10 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.Xerox">
+        <activity android:name=".UPDATEFRUIT"></activity>
+        <activity android:name=".adminviewfruit" />
         <activity android:name=".VIEWFRUIT" />
+        <activity android:name=".ADMINVIEWFRUITS" />
         <activity android:name=".ADDFRUIT" />
         <activity android:name=".VIEWVEG" />
         <activity android:name=".BUYVEG" />

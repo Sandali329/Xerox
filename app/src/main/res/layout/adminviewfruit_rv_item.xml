@@ -38,20 +38,6 @@
             android:textSize="20dp"
             android:textStyle="bold" />
 
-        <TextView
-            android:id="@+id/idfcusprice"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_margin="3dp"
-            android:layout_below="@id/idIVfruit"
-            android:padding="4dp"
-            android:text="Fruit Price"
-            android:textSize="20dp"
-            android:singleLine="true"
-            android:textColor="@color/black"
-            android:textStyle="bold"
-            android:layout_alignParentEnd="true"
-            android:layout_alignParentRight="true" />
 
 
     </RelativeLayout>
