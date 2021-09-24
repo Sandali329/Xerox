@@ -95,5 +95,6 @@ this.Fimglink=fimglink;
         parcel.writeString(Fname);
         parcel.writeString(Fprice);
         parcel.writeString(Fcusprice);
+        parcel.writeString(Fimglink);
     }
 }

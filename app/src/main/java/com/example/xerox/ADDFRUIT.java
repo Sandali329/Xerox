@@ -61,7 +61,7 @@ public class ADDFRUIT extends AppCompatActivity {
         fname = findViewById(R.id.Fname);
         fprice = findViewById(R.id.Fprice);
         fcusprice=findViewById(R.id.Fcusprice);
-        fimglink=findViewById(R.id.fimglink);
+        fimglink=findViewById(R.id.Fimglink);
         addfruit = findViewById(R.id.addFbtn);
 
         db = FirebaseDatabase.getInstance();

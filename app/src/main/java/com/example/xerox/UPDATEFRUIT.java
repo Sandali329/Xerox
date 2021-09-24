@@ -41,7 +41,7 @@ db=FirebaseDatabase.getInstance();
         fname = findViewById(R.id.Fname);
         fprice = findViewById(R.id.Fprice);
         fcusprice=findViewById(R.id.Fcusprice);
-        fimglink=findViewById(R.id.fimglink);
+        fimglink=findViewById(R.id.Fimglink);
         updatefruit = findViewById(R.id.updateFbtn);
         deletefruit=findViewById(R.id.deleteFbtn);
 
@@ -67,11 +67,11 @@ updatefruit.setOnClickListener(new View.OnClickListener() {
         String Fimglink=fimglink.getText().toString();
 
         Map<String,Object>map=new HashMap<>();
-        map.put("Fcode",Fcode);
-        map.put("Fname",Fname);
-        map.put("Fprice",Fprice);
-        map.put("Fcusprice",Fcusprice);
-        map.put("Fimglink",Fimglink);
+        map.put("fcode",Fcode);
+        map.put("fname",Fname);
+        map.put("fprice",Fprice);
+        map.put("fcusprice",Fcusprice);
+        map.put("fimglink",Fimglink);
 
         fruitref.addValueEventListener(new ValueEventListener() {
             @Override
