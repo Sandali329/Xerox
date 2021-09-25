@@ -53,10 +53,6 @@
     <string name="btn_show">Show profile</string>
 
 
-
-
-
-
     <string name="title_activity_card_payment">card_payment</string>
     <!-- Strings used for fragments for navigation -->
     <string name="first_fragment_label">First Fragment</string>

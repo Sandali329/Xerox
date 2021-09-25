@@ -9,7 +9,9 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.Xerox">
-        <activity android:name=".UPDATEFRUIT"></activity>
+        <activity android:name=".supcusselect"></activity>
+        <activity android:name=".cusselect" />
+        <activity android:name=".UPDATEFRUIT" />
         <activity android:name=".adminviewfruit" />
         <activity android:name=".VIEWFRUIT" />
         <activity android:name=".ADMINVIEWFRUITS" />
@@ -17,37 +19,29 @@
         <activity android:name=".VIEWVEG" />
         <activity android:name=".BUYVEG" />
         <activity android:name=".ADDVEG" />
-        <activity android:name=".BUYFRUIT" >
+        <activity android:name=".BUYFRUIT"/>
+
+        <activity android:name=".RegisterActivity" />
+        <activity android:name=".LoginActivity" />
+        <activity android:name=".SupplierActivity1" />
+        <activity android:name=".itemDetailsActivity" />
+        <activity android:name=".SupplierActivity3" />
+        <activity android:name=".SupplierCartActivity4" />
+        <activity android:name=".SupProductsActivity" />
+        <activity android:name=".SupSelectItemActivity" />
+        <activity android:name=".placeOrder" />
+        <activity android:name=".Payment" />
+        <activity android:name=".order_successfull" />
+        <activity android:name=".cash_on_delivery" />
+        <activity android:name=".Card_details" />
+        <activity android:name=".DisplayActivity" />
+        <activity android:name=".CusRegister" />
+        <activity android:name=".MainActivity" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
-        </activity>
-        <activity android:name=".RegisterActivity" />
-        <activity android:name=".LoginActivity" />
-        <activity android:name=".SupplierActivity1" />
-        <activity android:name=".itemDetailsActivity"/>
-        <activity android:name=".SupplierActivity3"/>
-        <activity android:name=".SupplierCartActivity4"/>
-        <activity android:name=".SupProductsActivity"/>
-        <activity android:name=".SupSelectItemActivity"/>
-        <activity android:name=".placeOrder">
-
-        </activity>
-        <activity android:name=".Payment"/>
-        <activity android:name=".order_successfull"/>
-        <activity android:name=".cash_on_delivery"/>
-        <activity android:name=".Card_details"/>
-
-
-
-
-        <activity android:name=".DisplayActivity" />
-        <activity android:name=".CusRegister" >
-        </activity>
-        <activity android:name=".MainActivity">
-
         </activity>
     </application>
 
