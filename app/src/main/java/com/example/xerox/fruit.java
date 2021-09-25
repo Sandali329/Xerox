@@ -7,7 +7,8 @@ public class fruit implements Parcelable {
     private String Fcode;
     private String Fname;
     private String Fprice;
-
+    private String Fcusprice;
+    private String Fimglink;
 
 
     public fruit() {
@@ -17,6 +18,8 @@ public class fruit implements Parcelable {
         Fcode = in.readString();
         Fname = in.readString();
         Fprice = in.readString();
+        Fcusprice=in.readString();
+        Fimglink=in.readString();
     }
 
     public static final Creator<fruit> CREATOR = new Creator<fruit>() {
@@ -31,10 +34,12 @@ public class fruit implements Parcelable {
         }
     };
 
-    public fruit(String fcode, String fname, String fprice) {
-this.Fcode=fcode;
-this.Fname=fname;
-this.Fprice=fprice;
+    public fruit(String fcode, String fname, String fprice,String fcusprice,String fimglink) {
+        this.Fcode=fcode;
+        this.Fname=fname;
+        this.Fprice=fprice;
+        this.Fcusprice=fcusprice;
+        this.Fimglink=fimglink;
     }
 
     public String getFcode() {
@@ -61,6 +66,23 @@ this.Fprice=fprice;
         this.Fprice = Fprice;
     }
 
+    public String getFcusprice() {
+        return Fcusprice;
+    }
+
+    public void setFcusprice(String Fcusprice) {
+        this.Fcusprice = Fcusprice;
+    }
+
+    public String getFimglink() {
+        return Fimglink;
+    }
+
+    public void setFimglink(String Fimglink) {
+        this.Fimglink = Fimglink;
+    }
+
+
 
     @Override
     public int describeContents() {
@@ -72,5 +94,7 @@ this.Fprice=fprice;
         parcel.writeString(Fcode);
         parcel.writeString(Fname);
         parcel.writeString(Fprice);
+        parcel.writeString(Fcusprice);
+        parcel.writeString(Fimglink);
     }
 }

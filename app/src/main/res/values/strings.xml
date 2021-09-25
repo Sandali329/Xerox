@@ -19,7 +19,6 @@
     <string name="btn_veg">Vegetables</string>
 
 
-
     <string name="title_activity_tabbed">tabbed</string>
     <string name="tab_text_1">Tab 1</string>
     <string name="tab_text_2">Tab 2</string>
@@ -32,7 +31,7 @@
     <string name="Fname">Apple</string>
     <string name="Fprice">Rs 100</string>
     <string name="ADDFbtn">ADD</string>
-    <string name="VIEWFbtn" >VIEW</string>
+    <string name="VIEWFbtn">VIEW</string>
     <string name="stock1">CARROT</string>
     <string name="stockqty">10 KG</string>
     <string name="viewFcode">F10</string>

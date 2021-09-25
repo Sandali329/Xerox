@@ -4,11 +4,11 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
 
-public class SupItemAddActivity extends AppCompatActivity {
+public class SupSelectItemActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_sup_item_add);
+        setContentView(R.layout.activity_sup_select_item);
     }
 }

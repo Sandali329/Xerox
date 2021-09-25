@@ -12,6 +12,8 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.squareup.picasso.Picasso;
+
 import org.jetbrains.annotations.NotNull;
 
 import java.util.ArrayList;
@@ -42,7 +44,7 @@ public class fruitRVadaptor extends RecyclerView.Adapter<fruitRVadaptor.Viewhold
         fruit fruit=fruitArrayList.get(position);
         holder.fruitnameTV.setText(fruit.getFname());
         holder.fruitpriceTV.setText("RS "+fruit.getFprice()+"  Per 250g");
-
+        Picasso.get().load(fruit.getFimglink()).into(holder.fruitimg);
 
 
 

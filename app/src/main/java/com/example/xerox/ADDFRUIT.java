@@ -20,7 +20,7 @@ public class ADDFRUIT extends AppCompatActivity {
 
     public Button viewfruit, addfruit;
 
-    private EditText fcode, fname, fprice;
+    private EditText fcode, fname, fprice,fcusprice,fimglink;
     private FirebaseDatabase db;
     DatabaseReference fruitref;
 
@@ -31,6 +31,8 @@ public class ADDFRUIT extends AppCompatActivity {
         fcode.setText("");
         fname.setText("");
         fprice.setText("");
+        fcusprice.setText("");
+        fimglink.setText("");
 
     }
 
@@ -47,18 +49,20 @@ public class ADDFRUIT extends AppCompatActivity {
         viewfruit.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(ADDFRUIT.this, VIEWFRUIT.class);
-                startActivity(intent);
+                //Intent intent = new Intent(ADDFRUIT.this, ADMINVIEWFRUITS.class);
+                //startActivity(intent);
 
 
             }
         });
 
 
-        fcode = findViewById(R.id.Fcode);
+        /*fcode = findViewById(R.id.Fcode);
         fname = findViewById(R.id.Fname);
         fprice = findViewById(R.id.Fprice);
-        addfruit = findViewById(R.id.addFbtn);
+        fcusprice=findViewById(R.id.Fcusprice);
+        fimglink=findViewById(R.id.Fimglink);
+        addfruit = findViewById(R.id.addFbtn);*/
 
         db = FirebaseDatabase.getInstance();
         fruitref = db.getReference("Fruits");
@@ -69,8 +73,9 @@ public class ADDFRUIT extends AppCompatActivity {
                 String Fcode = fcode.getText().toString();
                 String Fname = fname.getText().toString();
                 String Fprice = fprice.getText().toString();
-
-                fruit fruit = new fruit(Fcode, Fname, Fprice);
+                String Fcusprice=fcusprice.getText().toString();
+                String Fimglink=fimglink.getText().toString();
+                fruit fruit = new fruit(Fcode, Fname, Fprice,Fcusprice,Fimglink);
                 fruitref.addValueEventListener(new ValueEventListener() {
                     @Override
                     public void onDataChange(@NonNull DataSnapshot snapshot) {

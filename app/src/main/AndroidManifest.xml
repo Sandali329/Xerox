@@ -9,8 +9,14 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.Xerox">
-        <activity android:name=".VIEWFRUIT"></activity>
-        <activity android:name=".RegisterActivity"></activity>
+        <activity android:name=".viewFruit_Card"></activity>
+        <activity android:name=".SupplierCartActivity4" />
+        <activity android:name=".SupplierActivity3" />
+        <activity android:name=".SupSelectItemActivity" />
+        <activity android:name=".SupplierActivity2" />
+        <activity android:name=".SupProductsActivity" />
+        <activity android:name=".VIEWFRUIT" />
+        <activity android:name=".RegisterActivity" />
         <activity android:name=".LoginActivity" />
         <activity android:name=".SupplierActivity1" />
         <activity android:name=".MainActivity">

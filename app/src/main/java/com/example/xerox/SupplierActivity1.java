@@ -9,9 +9,12 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
+import com.google.android.material.floatingactionbutton.FloatingActionButton;
+
 public class SupplierActivity1 extends AppCompatActivity {
     EditText et_supName;
     String name;
+    FloatingActionButton cart;
 
     Button fruits, veg;
 
@@ -20,15 +23,14 @@ public class SupplierActivity1 extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_supplier1);
 
+        cart = findViewById(R.id.cart_btn);
         et_supName = findViewById(R.id.et_supName);
         Intent start = getIntent();
         name = start.getStringExtra("name");
         et_supName.setText(name);
-    }
-
-    public void gotoFruitsPage(){
 
     }
+
 
     public void FruitsPage(View view) {
         Intent intent1 = new Intent(this,VIEWFRUIT.class);
@@ -36,8 +38,15 @@ public class SupplierActivity1 extends AppCompatActivity {
     }
 
     public void VegPage(View view) {
-        Intent intent1 = new Intent(this,VIEWFRUIT.class);
+        Intent intent1 = new Intent(this,VIEWVEG.class);
         startActivity(intent1);
     }
+
+    public void myCart(View view) {
+        Intent intent1 = new Intent(this,SupplierCartActivity4.class);
+        startActivity(intent1);
+    }
+
+
 
 }

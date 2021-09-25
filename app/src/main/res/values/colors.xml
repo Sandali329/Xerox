@@ -9,7 +9,10 @@
     <color name="white">#FFFFFFFF</color>
     <color name="btn_register">#F1D620</color>
     <color name="header">#F1D620</color>
+    <color name="AppYellow">#F1D620</color>
     <color name="toolbar2">#F1D620</color>
     <color name="addFbtn">#F1D620</color>
     <color name="darkyellow">#F1D620</color>
+    <color name="number_btn">#F1D62C</color>
+    <color name="btn1">#EAFDB4</color>
 </resources>

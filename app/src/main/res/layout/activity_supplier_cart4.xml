@@ -2,16 +2,15 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/idRLfruit"
+    android:id="@+id/supCrt_recyView"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".VIEWFRUIT">
+    tools:context=".SupplierCartActivity4">
 
     <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/idRVfruit"
+        android:id="@+id/cart_recyView"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:scrollbars="vertical"/>
 
 </RelativeLayout>
-
