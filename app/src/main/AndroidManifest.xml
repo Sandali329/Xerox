@@ -17,7 +17,13 @@
         <activity android:name=".VIEWVEG" />
         <activity android:name=".BUYVEG" />
         <activity android:name=".ADDVEG" />
-        <activity android:name=".BUYFRUIT" />
+        <activity android:name=".BUYFRUIT" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
         <activity android:name=".RegisterActivity" />
         <activity android:name=".LoginActivity" />
         <activity android:name=".SupplierActivity1" />
@@ -38,13 +44,10 @@
 
 
         <activity android:name=".DisplayActivity" />
-        <activity android:name=".CusRegister" />
+        <activity android:name=".CusRegister" >
+        </activity>
         <activity android:name=".MainActivity">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
 
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
         </activity>
     </application>
 

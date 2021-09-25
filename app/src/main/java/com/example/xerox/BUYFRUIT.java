@@ -119,7 +119,7 @@ public class BUYFRUIT extends AppCompatActivity implements buyfruitRVadaptor.fru
             @Override
             public void onClick(View view) {
                 Intent i=new Intent(BUYFRUIT.this,itemDetailsActivity.class);
-                //i.putExtra("fruits",fruit);
+                i.putExtra("fruits",fruit);
                 startActivity(i);
             }
         });
