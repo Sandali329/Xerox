@@ -1,0 +1,56 @@
+<resources>
+    <string name="app_name">Xerox</string>
+
+    <string name="tv_loginpage">Login</string>
+    <string name="et_UN">Enter user name</string>
+    <string name="et_PW">Enter password</string>
+    <string name="btn_login">Login</string>
+    <string name="btn_signup">Sign up</string>
+    <string name="btn_signin">Sign in</string>
+    <string name="tv_mainpage">Already a user? Login</string>
+    <string name="et_supName" />
+    <string name="tv_supActy1">What do you supply?</string>
+    <string name="btn_fruits">Fruits</string>
+    <string name="btn_veg">Vegetables</string>
+
+
+    <string name="title_activity_tabbed">tabbed</string>
+    <string name="tab_text_1">Tab 1</string>
+    <string name="tab_text_2">Tab 2</string>
+    <string name="Vcode">V10</string>
+    <string name="Vname">Carrot</string>
+    <string name="Vprice">Rs 100</string>
+    <string name="ADDVbtn">ADD</string>
+    <string name="VIEWVbtn">VIEW</string>
+    <string name="Fcode">F10</string>
+    <string name="Fname">Apple</string>
+    <string name="Fprice">Rs 100</string>
+    <string name="ADDFbtn">ADD</string>
+    <string name="VIEWFbtn">VIEW</string>
+    <string name="stock1">CARROT</string>
+    <string name="stockqty">10 KG</string>
+    <string name="viewFcode">F10</string>
+    <string name="viewFname">Apple</string>
+    <string name="viewFprice">Rs 100</string>
+    <string name="editFbtn">EDIT</string>
+    <string name="deleteFbtn">DELETE</string>
+    <string name="viewVcode">V10</string>
+    <string name="viewVname">Carrot</string>
+    <string name="viewVprice">Rs !00</string>
+    <string name="editVbtn">EDIT</string>
+    <string name="deleteVbtn">DELETE</string>
+    <string name="et_userName">Enter User name</string>
+    <string name="et_Phone">Phone No</string>
+    <string name="et_Email">Email Address</string>
+    <string name="et_Password">Password</string>
+    <string name="btn_register">Register</string>
+    <string name="tv_login">Already a user? Login</string>
+    <string name="et_name">Enter your Name</string>
+    <string name="et_phone">Mobile No</string>
+    <string name="et_email">Email</string>
+    <string name="et_password">Password</string>
+    <string name="btn_Creg">Register Customer</string>
+    <string name="btn_show">Show profile</string>
+
+
+</resources>

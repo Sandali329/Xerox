@@ -1,0 +1,69 @@
+{
+  "project_info": {
+    "project_number": "220541154274",
+    "firebase_url": "https://xerox-mad-default-rtdb.firebaseio.com",
+    "project_id": "xerox-mad",
+    "storage_bucket": "xerox-mad.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:220541154274:android:3c42a0616f6976636f7fbb",
+        "android_client_info": {
+          "package_name": "com.example.xerox"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "220541154274-i6mjm06rdqophhqopcbfele9ttljv2ii.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDB36iKDYKn0iCePsRgFGpC4gx9yIDNb0U"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "220541154274-i6mjm06rdqophhqopcbfele9ttljv2ii.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:220541154274:android:80232bf59bed81ed6f7fbb",
+        "android_client_info": {
+          "package_name": "com.example.xerox_mad_project"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "220541154274-i6mjm06rdqophhqopcbfele9ttljv2ii.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDB36iKDYKn0iCePsRgFGpC4gx9yIDNb0U"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "220541154274-i6mjm06rdqophhqopcbfele9ttljv2ii.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
