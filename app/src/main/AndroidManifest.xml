@@ -9,7 +9,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.Xerox">
-        <activity android:name=".supcusselect"></activity>
+        <activity android:name=".Adminpage"></activity>
+        <activity android:name=".supcusselect" />
         <activity android:name=".cusselect" />
         <activity android:name=".UPDATEFRUIT" />
         <activity android:name=".adminviewfruit" />
@@ -19,8 +20,7 @@
         <activity android:name=".VIEWVEG" />
         <activity android:name=".BUYVEG" />
         <activity android:name=".ADDVEG" />
-        <activity android:name=".BUYFRUIT"/>
-
+        <activity android:name=".BUYFRUIT" />
         <activity android:name=".RegisterActivity" />
         <activity android:name=".LoginActivity" />
         <activity android:name=".SupplierActivity1" />
@@ -36,7 +36,7 @@
         <activity android:name=".Card_details" />
         <activity android:name=".DisplayActivity" />
         <activity android:name=".CusRegister" />
-        <activity android:name=".MainActivity" >
+        <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
