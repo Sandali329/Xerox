@@ -16,6 +16,7 @@ public class cusselect extends AppCompatActivity {
 
 
         fruits=(Button)findViewById(R.id.btnbuy_fruits);
+
         fruits.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {

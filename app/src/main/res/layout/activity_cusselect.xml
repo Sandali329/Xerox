@@ -80,21 +80,5 @@
         app:layout_constraintStart_toEndOf="@+id/btnbuy_fruits"
         app:layout_constraintTop_toBottomOf="@+id/imageView3" />
 
-    <com.google.android.material.floatingactionbutton.FloatingActionButton
-        android:id="@+id/cart_btn"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="354dp"
-        android:layout_marginLeft="354dp"
-        android:layout_marginTop="20dp"
-        android:layout_marginEnd="2dp"
-        android:layout_marginRight="2dp"
-        android:backgroundTint="@color/AppYellow"
-        android:clickable="true"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/cart" />
-
 
 </androidx.constraintlayout.widget.ConstraintLayout>

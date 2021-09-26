@@ -33,8 +33,9 @@ public class CusRegister extends AppCompatActivity {
         btn_show=(Button) findViewById(R.id.btn_show);
 
         CusObj = new Customer();
-
     }
+
+
     public void clearControls(){
         etname.setText("");
         etphone.setText("");
@@ -45,15 +46,21 @@ public class CusRegister extends AppCompatActivity {
     public void CreateData(View view) {
         dbref = FirebaseDatabase.getInstance().getReference().child("Customer");
 
+        btn_Creg.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                CusObj.setName(etname.getText().toString().trim());
+                CusObj.setMobile(etphone.getText().toString().trim());
+                CusObj.setEmail(etemail.getText().toString().trim());
+                CusObj.setPassword(etpassword.getText().toString().trim());
 
-        CusObj.setName(etname.getText().toString().trim());
-        CusObj.setMobile(etphone.getText().toString().trim());
-        CusObj.setEmail(etemail.getText().toString().trim());
-        CusObj.setPassword(etpassword.getText().toString().trim());
-
-        dbref.push().setValue(CusObj);
-        Toast.makeText(CusRegister.this, "Successfully Registered customer", Toast.LENGTH_SHORT).show();
-        clearControls();
+                dbref.push().setValue(CusObj);
+                Intent intent = new Intent(CusRegister.this,cusselect.class);
+                Toast.makeText(CusRegister.this, "Successfully Registered customer", Toast.LENGTH_SHORT).show();
+                clearControls();
+                startActivity(intent);
+            }
+        });
 
 
         btn_show.setOnClickListener(new View.OnClickListener() {

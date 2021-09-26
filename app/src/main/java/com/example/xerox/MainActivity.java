@@ -17,8 +17,8 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        customer = findViewById(R.id.btn_supReg);
-        supplier = findViewById(R.id.btn_cusReg);
+        supplier = findViewById(R.id.btn_supReg);
+        customer = findViewById(R.id.btn_cusReg);
         admin=findViewById(R.id.admintextview);
 
         admin.setOnClickListener(new View.OnClickListener() {
