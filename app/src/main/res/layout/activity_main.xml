@@ -8,11 +8,12 @@
     tools:context=".MainActivity">
 
     <Button
-        android:id="@+id/btn_signup"
+        android:id="@+id/btn_cusReg"
         android:layout_width="133dp"
         android:layout_height="63dp"
-        android:layout_marginTop="280dp"
-        android:text="@string/btn_signup"
+        android:layout_marginTop="244dp"
+        android:text="Customer"
+        android:textStyle="bold"
         android:textColor="#000000"
         android:textSize="16sp"
         app:backgroundTint="#F1D620"
@@ -21,29 +22,18 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <Button
-        android:id="@+id/btn_signin"
+        android:id="@+id/btn_supReg"
         android:layout_width="133dp"
         android:layout_height="63dp"
-        android:layout_marginTop="2dp"
-        android:text="@string/btn_signin"
+        android:layout_marginTop="96dp"
+        android:text="Supplier"
+        android:textStyle="bold"
         android:textColor="#000000"
         android:textSize="16sp"
         app:backgroundTint="#F1D620"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tv_mainpage" />
-
-    <TextView
-        android:id="@+id/tv_mainpage"
-        android:layout_width="213dp"
-        android:layout_height="34dp"
-        android:layout_marginTop="40dp"
-        android:text="@string/tv_mainpage"
-        android:textColor="#000000"
-        android:textSize="20sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/btn_signup" />
+        app:layout_constraintTop_toBottomOf="@+id/btn_cusReg" />
 
     <TextView
         android:id="@+id/admintextview"

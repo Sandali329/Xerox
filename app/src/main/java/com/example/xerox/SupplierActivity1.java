@@ -25,8 +25,9 @@ public class SupplierActivity1 extends AppCompatActivity {
 
         cart = findViewById(R.id.cart_btn);
         et_supName = findViewById(R.id.et_supName);
+
         Intent start = getIntent();
-        name = start.getStringExtra("name");
+        name = start.getStringExtra("sendName");
         et_supName.setText(name);
 
     }

@@ -2,6 +2,7 @@ package com.example.xerox;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -53,8 +54,23 @@ public class RegisterActivity extends AppCompatActivity {
 
                 supplierref.push().setValue(sup1);
 
+                Intent intent = new Intent(RegisterActivity.this,SupplierActivity1.class);
+
+                String name = userName.getText().toString();
+
+                intent.putExtra("sendName", name);
                 Toast.makeText(RegisterActivity.this, "Successfully Registered..", Toast.LENGTH_SHORT).show();
                 clearControls();
+                startActivity(intent);
+            }
+        });
+
+
+        Tvlogin.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i = new Intent(RegisterActivity.this,LoginActivity.class);
+                startActivity(i);
             }
         });
 

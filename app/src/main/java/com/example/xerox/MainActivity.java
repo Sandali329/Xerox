@@ -9,17 +9,18 @@ import android.widget.Button;
 import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity {
-    private Button signIn;
-    private Button signUp;
-private TextView admin;
+    private Button customer;
+    private Button supplier;
+    private TextView admin;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        signIn = findViewById(R.id.btn_signin);
-        signUp = findViewById(R.id.btn_signup);
-admin=findViewById(R.id.admintextview);
+        customer = findViewById(R.id.btn_supReg);
+        supplier = findViewById(R.id.btn_cusReg);
+        admin=findViewById(R.id.admintextview);
+
         admin.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -28,15 +29,15 @@ admin=findViewById(R.id.admintextview);
             }
         });
 
-        signIn.setOnClickListener(new View.OnClickListener() {
+        customer.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent i = new Intent(MainActivity.this,LoginActivity.class);
+                Intent i = new Intent(MainActivity.this,CusRegister.class);
                 startActivity(i);
             }
         });
 
-        signUp.setOnClickListener(new View.OnClickListener() {
+        supplier.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent in = new Intent(MainActivity.this,RegisterActivity.class);

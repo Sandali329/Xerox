@@ -9,7 +9,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.Xerox">
-        <activity android:name=".Adminpage"></activity>
+        <activity android:name=".MainActivity2"></activity>
+        <activity android:name=".Adminpage" />
         <activity android:name=".supcusselect" />
         <activity android:name=".cusselect" />
         <activity android:name=".UPDATEFRUIT" />
