@@ -9,11 +9,15 @@ import android.widget.Button;
 
 public class Adminpage extends AppCompatActivity {
 
-    Button fruit,veg,addfruit;
+    Button fruit,veg,addfruit,addriders;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_adminpage);
+
+        addriders = findViewById(R.id.adminRiders);
+
+
 addfruit=findViewById(R.id.adminaddfruit);
         fruit=findViewById(R.id.adminfruit);
         fruit.setOnClickListener(new View.OnClickListener() {
@@ -28,6 +32,15 @@ addfruit=findViewById(R.id.adminaddfruit);
             public void onClick(View view) {
                 Intent intent2 = new Intent(Adminpage.this, ADDFRUIT.class);
                 startActivity(intent2);
+            }
+        });
+
+
+        addriders.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent3 = new Intent(Adminpage.this, addriders.class);
+                startActivity(intent3);
             }
         });
     }

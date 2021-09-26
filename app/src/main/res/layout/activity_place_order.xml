@@ -7,17 +7,6 @@
     android:layout_height="match_parent"
     tools:context=".placeOrder">
 
-    <ImageView
-        android:id="@+id/imageView4"
-        android:layout_width="267dp"
-        android:layout_height="238dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.227"
-        app:srcCompat="@drawable/oip" />
-
     <TextView
         android:id="@+id/textView17"
         android:layout_width="wrap_content"
@@ -147,4 +136,15 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.067" />
+
+    <ImageView
+        android:id="@+id/imageView5"
+        android:layout_width="351dp"
+        android:layout_height="238dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.245"
+        app:srcCompat="@drawable/f15" />
 </androidx.constraintlayout.widget.ConstraintLayout>

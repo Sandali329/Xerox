@@ -17,7 +17,6 @@ public class addriders extends AppCompatActivity {
     EditText email;
     EditText phone;
     Button add;
-    
 
     DatabaseReference adddataRef;
 

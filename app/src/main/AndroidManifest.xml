@@ -16,6 +16,7 @@
         <activity android:name=".UPDATEFRUIT" />
         <activity android:name=".adminviewfruit" />
         <activity android:name=".VIEWFRUIT" />
+        <activity android:name=".addriders"/>
         <activity android:name=".ADMINVIEWFRUITS" />
         <activity android:name=".ADDFRUIT" />
         <activity android:name=".VIEWVEG" />
@@ -30,7 +31,10 @@
         <activity android:name=".SupplierCartActivity4" />
         <activity android:name=".SupProductsActivity" />
         <activity android:name=".SupSelectItemActivity" />
-        <activity android:name=".placeOrder" />
+        <activity android:name=".placeOrder" >
+
+
+        </activity>
         <activity android:name=".Payment" />
         <activity android:name=".order_successfull" />
         <activity android:name=".cash_on_delivery" />
