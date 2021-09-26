@@ -14,12 +14,42 @@
         android:scaleType="centerCrop" />
 
     <TextView
+        android:id="@+id/I_name1"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/p_image"
+        android:layout_marginLeft="0dp"
+        android:text="Product Name:"
+        android:textColor="@android:color/black"
+        android:layout_marginRight="0dp"
+        android:textStyle="bold"
+        android:textSize="18sp"
+        android:gravity="center"
+        android:layout_marginTop="10dp"/>
+
+    <TextView
         android:id="@+id/I_name"
-        android:layout_width="match_parent"
+        android:layout_width="250dp"
         android:layout_height="wrap_content"
         android:layout_below="@+id/p_image"
         android:text="Product Name"
+        android:layout_marginLeft="200dp"
         android:textColor="@android:color/black"
+        android:layout_marginRight="0dp"
+        android:textStyle="bold"
+        android:textSize="18sp"
+        android:gravity="center"
+        android:layout_marginTop="10dp"/>
+
+    <TextView
+        android:id="@+id/I_price1"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/I_name"
+        android:layout_marginLeft="0dp"
+        android:text="Product Price:"
+        android:textColor="@android:color/black"
+        android:layout_marginRight="0dp"
         android:textStyle="bold"
         android:textSize="18sp"
         android:gravity="center"
@@ -27,10 +57,12 @@
 
     <TextView
         android:id="@+id/I_price"
-        android:layout_width="match_parent"
+        android:layout_width="250dp"
         android:layout_height="wrap_content"
         android:layout_below="@+id/I_name"
         android:text="Product Price"
+        android:layout_marginRight="0dp"
+        android:layout_marginLeft="200dp"
         android:textColor="@android:color/black"
         android:textStyle="bold"
         android:textSize="16sp"

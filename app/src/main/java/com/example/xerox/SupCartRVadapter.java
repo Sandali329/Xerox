@@ -31,8 +31,6 @@ public class SupCartRVadapter extends RecyclerView.Adapter{
         this.supOrderList = supOrder;
     }
 
-
-
     @NonNull
     @NotNull
     @Override
@@ -48,10 +46,9 @@ public class SupCartRVadapter extends RecyclerView.Adapter{
     public void onBindViewHolder(@NonNull @NotNull RecyclerView.ViewHolder holder, int position) {
         ViewHolderClass viewHolderClass = (ViewHolderClass)holder;
         SupOrder supOrder = supOrderList.get(position);
-        viewHolderClass.item.setText("Product name:                   " + supOrder.getFname());
-        viewHolderClass.price.setText("Product price per 250g:        " + supOrder.getFprice());
-        viewHolderClass.quantity.setText("Product quantity:             " + supOrder.getQty());
-
+        viewHolderClass.item.setText("Product name:       "+supOrder.getFname());
+        viewHolderClass.price.setText("Product price:       "+supOrder.getFprice());
+        viewHolderClass.quantity.setText( "Product Qty:         "+supOrder.getQty());
     }
 
     @Override
