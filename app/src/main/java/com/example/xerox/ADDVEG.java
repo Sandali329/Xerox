@@ -14,11 +14,11 @@ public class ADDVEG extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_addveg);
 
-        viewveg=(Button) findViewById(R.id.viewVbtn);
+        viewveg=(Button) findViewById(R.id.viewFbtn);
         viewveg.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent= new Intent(ADDVEG.this,VIEWVEG.class);
+                Intent intent= new Intent(ADDVEG.this,ADMINVIEWVEGETABLES.class);
                 startActivity(intent);
             }
         });

@@ -7,49 +7,30 @@
     tools:context=".SupplierActivity1">
 
     <TextView
-        android:id="@+id/supplier"
-        android:layout_width="300dp"
-        android:layout_height="35dp"
-        android:layout_marginStart="12dp"
-        android:layout_marginLeft="12dp"
-        android:layout_marginTop="41dp"
-        android:background="@color/AppYellow"
-        android:ems="10"
-        android:inputType="textPersonName"
-        android:text="Welcome to Freshly Grown  "
-        android:textColor="#000000"
-        android:textSize="25sp"
-        android:textStyle="bold"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <TextView
         android:id="@+id/tv_hi"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
         android:layout_marginLeft="16dp"
-        android:layout_marginTop="53dp"
+        android:layout_marginTop="73dp"
         android:text="Hi"
         android:textColor="#000000"
         android:textSize="20sp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/supplier" />
+        app:layout_constraintTop_toBottomOf="@+id/toolbar5" />
 
     <EditText
         android:id="@+id/et_supName"
         android:layout_width="183dp"
         android:layout_height="49dp"
-        android:layout_marginTop="32dp"
+        android:layout_marginTop="52dp"
         android:ems="10"
         android:inputType="textPersonName"
         android:text="@string/et_supName"
         android:textColor="#000000"
         android:textSize="20sp"
         app:layout_constraintStart_toEndOf="@+id/tv_hi"
-        app:layout_constraintTop_toBottomOf="@+id/supplier" />
+        app:layout_constraintTop_toBottomOf="@+id/toolbar5" />
 
     <ImageView
         android:id="@+id/imageView3"
@@ -96,7 +77,7 @@
         android:layout_marginLeft="72dp"
         android:layout_marginEnd="36dp"
         android:layout_marginRight="36dp"
-        android:onClick="VegPage"
+
         android:text="@string/btn_veg"
         android:textColor="#000000"
         android:textSize="16sp"
@@ -112,7 +93,7 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="72dp"
         android:layout_marginLeft="72dp"
-        android:layout_marginTop="116dp"
+        android:layout_marginTop="60dp"
         android:layout_marginEnd="12dp"
         android:layout_marginRight="12dp"
         android:backgroundTint="@color/AppYellow"
@@ -121,8 +102,36 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.924"
         app:layout_constraintStart_toEndOf="@+id/et_supName"
-        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/toolbar5"
         app:srcCompat="@drawable/cart" />
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar5"
+        android:layout_width="409dp"
+        android:layout_height="wrap_content"
+        android:background="?attr/colorPrimary"
+        android:backgroundTint="@color/AppYellow"
+        android:minHeight="?attr/actionBarSize"
+        android:theme="?attr/actionBarTheme"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/supplier"
+        android:layout_width="300dp"
+        android:layout_height="35dp"
+        android:layout_marginTop="10dp"
+        android:background="@color/AppYellow"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:text="Welcome to Freshly Grown  "
+        android:textColor="#000000"
+        android:textSize="25sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="@+id/toolbar5"
+        app:layout_constraintStart_toStartOf="@+id/toolbar5"
+        app:layout_constraintTop_toTopOf="@+id/toolbar5" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

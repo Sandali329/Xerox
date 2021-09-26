@@ -28,56 +28,56 @@ import org.jetbrains.annotations.NotNull;
 
 import java.util.ArrayList;
 
-public class VIEWFRUIT extends AppCompatActivity implements fruitRVadaptor.fruitclickinterface {
+public class ADMINVIEWVEGETABLES extends AppCompatActivity implements adminviewvegetableRVadaptor.vegetableclickinterface {
 
-    private RecyclerView fruitRV;
+    private RecyclerView adminvegetableRV;
     private FirebaseDatabase db;
-    private DatabaseReference fruitref;
-    private ArrayList<fruit>fruitarraylist;
-    private RelativeLayout viewfruitRL,bottomsheetRL;
-    private fruitRVadaptor fruitRVadaptor;
+    private DatabaseReference vegetableref;
+    private ArrayList<vegetable>vegetablearraylist;
+    private RelativeLayout viewvegetableRL,bottomsheetRL;
+    private adminviewvegetableRVadaptor adminviewvegetableRVadaptor;
 
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_viewfruit);
+        setContentView(R.layout.adminviewveg);
 
-        fruitRV=findViewById(R.id.idRVfruit);
+        adminvegetableRV=findViewById(R.id.idRVadminviewvegetables);
         db=FirebaseDatabase.getInstance();
-        fruitref=FirebaseDatabase.getInstance().getReference("Fruits");
-        fruitarraylist=new ArrayList<>();
-        viewfruitRL=findViewById(R.id.idRLfruit);
+        vegetableref=FirebaseDatabase.getInstance().getReference("Vegetables");
+        vegetablearraylist=new ArrayList<>();
+        viewvegetableRL=findViewById(R.id.idRLadminviewvegetables);
 
-        bottomsheetRL=findViewById(R.id.prod_add_layout);
+        bottomsheetRL=findViewById(R.id.bottomsheetvegid);
 
-        fruitRVadaptor=new fruitRVadaptor(fruitarraylist,this,this);
-        fruitRV.setLayoutManager(new LinearLayoutManager(this));
-        fruitRV.setAdapter(fruitRVadaptor);
-        getallfruits();
+        adminviewvegetableRVadaptor=new adminviewvegetableRVadaptor(vegetablearraylist,this,this);
+       adminvegetableRV.setLayoutManager(new LinearLayoutManager(this));
+        adminvegetableRV.setAdapter(adminviewvegetableRVadaptor);
+        getallvegetable();
     }
-    private void getallfruits(){
-        fruitarraylist.clear();
-        fruitref.addChildEventListener(new ChildEventListener() {
+    private void getallvegetable(){
+        vegetablearraylist.clear();
+        vegetableref.addChildEventListener(new ChildEventListener() {
             @Override
             public void onChildAdded(@NonNull @NotNull DataSnapshot snapshot,  String previousChildName) {
-                fruitarraylist.add(snapshot.getValue(fruit.class));
-                fruitRVadaptor.notifyDataSetChanged();
+                vegetablearraylist.add(snapshot.getValue(vegetable.class));
+                adminviewvegetableRVadaptor.notifyDataSetChanged();
             }
 
             @Override
             public void onChildChanged(@NonNull @NotNull DataSnapshot snapshot,  String previousChildName) {
-                fruitRVadaptor.notifyDataSetChanged();
+                adminviewvegetableRVadaptor.notifyDataSetChanged();
             }
 
             @Override
             public void onChildRemoved(@NonNull @NotNull DataSnapshot snapshot) {
-                fruitRVadaptor.notifyDataSetChanged();
+                adminviewvegetableRVadaptor.notifyDataSetChanged();
             }
 
             @Override
             public void onChildMoved(@NonNull @NotNull DataSnapshot snapshot,  String previousChildName) {
-                fruitRVadaptor.notifyDataSetChanged();
+                adminviewvegetableRVadaptor.notifyDataSetChanged();
             }
 
             @Override
@@ -88,33 +88,30 @@ public class VIEWFRUIT extends AppCompatActivity implements fruitRVadaptor.fruit
     }
 
     @Override
-    public void onfruitclick(int position) {
-        displayborromsheet(fruitarraylist.get(position));
+    public void onvegetableclick(int position) {
+        displayborromsheet(vegetablearraylist.get(position));
     }
 
 
-    private void displayborromsheet(fruit fruit){
+    private void displayborromsheet(vegetable vegetable){
         final BottomSheetDialog bottomSheetDialog=new BottomSheetDialog(this);
-        View layout= LayoutInflater.from(this).inflate(R.layout.activity_sup_select_item,bottomsheetRL);
+        View layout= LayoutInflater.from(this).inflate(R.layout.activity_adminviewveg,bottomsheetRL);
         bottomSheetDialog.setContentView(layout);
         bottomSheetDialog.show();
         bottomSheetDialog.getBehavior().setState(BottomSheetBehavior.STATE_EXPANDED);
 
-        TextView Fname=layout.findViewById(R.id.I_name);
-        TextView Fprice=layout.findViewById(R.id.I_price);
-        Button selectBtn = layout.findViewById(R.id.Cart_btn);
-        ImageView Image = layout.findViewById(R.id.p_image);
+        TextView Vname=layout.findViewById(R.id.idfname);
+        TextView Vprice=layout.findViewById(R.id.idfprice);
+        Button editBtn = layout.findViewById(R.id.editvegbutton);
 
 
-        Picasso.get().load(fruit.getFimglink()).into(Image);
-        Fname.setText(fruit.getFname());
-        Fprice.setText(fruit.getFprice() + ".00/ 250g");
+        Vname.setText(vegetable.getVname());
+        Vprice.setText(vegetable.getVprice());
 
-        selectBtn.setOnClickListener(new View.OnClickListener() {
+        editBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(VIEWFRUIT.this,SupplierActivity3.class);
-                intent.putExtra("fruits",fruit);
+                Intent intent = new Intent(ADMINVIEWVEGETABLES.this,SupplierActivity3.class);
                 startActivity(intent);
             }
         });

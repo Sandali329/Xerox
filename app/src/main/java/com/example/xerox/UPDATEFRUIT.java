@@ -88,7 +88,7 @@ updatefruit.setOnClickListener(new View.OnClickListener() {
         });
     }
 });
-
+// delete function codes
 deletefruit.setOnClickListener(new View.OnClickListener() {
     @Override
     public void onClick(View view) {

@@ -67,6 +67,8 @@ public class ADDFRUIT extends AppCompatActivity {
         db = FirebaseDatabase.getInstance();
         fruitref = db.getReference("Fruits");
 
+         //Add fruits to database
+
         addfruit.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {

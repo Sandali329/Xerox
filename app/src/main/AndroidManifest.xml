@@ -9,15 +9,16 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.Xerox">
-        <activity android:name=".MainActivity2"></activity>
         <activity android:name=".Adminpage" />
-        <activity android:name=".supcusselect" />
+
         <activity android:name=".cusselect" />
         <activity android:name=".UPDATEFRUIT" />
         <activity android:name=".adminviewfruit" />
         <activity android:name=".VIEWFRUIT" />
         <activity android:name=".addriders"/>
         <activity android:name=".ADMINVIEWFRUITS" />
+        <activity android:name=".adminviewveg"></activity>
+        <activity android:name=".ADMINVIEWVEGETABLES" />
         <activity android:name=".ADDFRUIT" />
         <activity android:name=".VIEWVEG" />
         <activity android:name=".BUYVEG" />

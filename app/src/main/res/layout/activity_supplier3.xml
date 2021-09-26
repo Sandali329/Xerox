@@ -46,7 +46,7 @@
         android:layout_marginTop="4dp"
         android:backgroundTint="@color/btn1"
         android:clickable="true"
-        android:onClick="increment"
+        android:onClick="incrementQty"
         app:srcCompat="@drawable/plus1" />
 
     <com.google.android.material.floatingactionbutton.FloatingActionButton
@@ -58,7 +58,7 @@
         android:layout_marginTop="4dp"
         android:backgroundTint="@color/btn1"
         android:clickable="true"
-        android:onClick="decrement"
+        android:onClick="decrementQty"
         app:srcCompat="@drawable/minus" />
 
     <EditText
