@@ -29,6 +29,14 @@ public class SupplierActivity1 extends AppCompatActivity {
         Intent start = getIntent();
         name = start.getStringExtra("sendName");
         et_supName.setText(name);
+        veg=findViewById(R.id.btn_veg);
+        veg.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent1 = new Intent(SupplierActivity1.this,VIEWVEG.class);
+                startActivity(intent1);
+            }
+        });
 
     }
 

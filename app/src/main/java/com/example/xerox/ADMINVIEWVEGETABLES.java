@@ -28,32 +28,32 @@ import org.jetbrains.annotations.NotNull;
 
 import java.util.ArrayList;
 
-public class VIEWVEG extends AppCompatActivity implements vegetableRVadaptor.vegetableclickinterface {
+public class ADMINVIEWVEGETABLES extends AppCompatActivity implements adminviewvegetableRVadaptor.vegetableclickinterface {
 
-    private RecyclerView vegetableRV;
+    private RecyclerView adminvegetableRV;
     private FirebaseDatabase db;
     private DatabaseReference vegetableref;
     private ArrayList<vegetable>vegetablearraylist;
     private RelativeLayout viewvegetableRL,bottomsheetRL;
-    private vegetableRVadaptor vegetableRVadaptor;
+    private adminviewvegetableRVadaptor adminviewvegetableRVadaptor;
 
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_viewveg);
+        setContentView(R.layout.adminviewveg);
 
-        vegetableRV=findViewById(R.id.idRVvegetable);
+        adminvegetableRV=findViewById(R.id.idRVadminviewvegetables);
         db=FirebaseDatabase.getInstance();
         vegetableref=FirebaseDatabase.getInstance().getReference("Vegetables");
         vegetablearraylist=new ArrayList<>();
-        viewvegetableRL=findViewById(R.id.idRLvegetable);
+        viewvegetableRL=findViewById(R.id.idRLadminviewvegetables);
 
-        bottomsheetRL=findViewById(R.id.prod_add_layout);
+        bottomsheetRL=findViewById(R.id.bottomsheetvegid);
 
-        vegetableRVadaptor=new vegetableRVadaptor(vegetablearraylist,this,this);
-        vegetableRV.setLayoutManager(new LinearLayoutManager(this));
-        vegetableRV.setAdapter(vegetableRVadaptor);
+        adminviewvegetableRVadaptor=new adminviewvegetableRVadaptor(vegetablearraylist,this,this);
+       adminvegetableRV.setLayoutManager(new LinearLayoutManager(this));
+        adminvegetableRV.setAdapter(adminviewvegetableRVadaptor);
         getallvegetable();
     }
     private void getallvegetable(){
@@ -62,22 +62,22 @@ public class VIEWVEG extends AppCompatActivity implements vegetableRVadaptor.veg
             @Override
             public void onChildAdded(@NonNull @NotNull DataSnapshot snapshot,  String previousChildName) {
                 vegetablearraylist.add(snapshot.getValue(vegetable.class));
-                vegetableRVadaptor.notifyDataSetChanged();
+                adminviewvegetableRVadaptor.notifyDataSetChanged();
             }
 
             @Override
             public void onChildChanged(@NonNull @NotNull DataSnapshot snapshot,  String previousChildName) {
-                vegetableRVadaptor.notifyDataSetChanged();
+                adminviewvegetableRVadaptor.notifyDataSetChanged();
             }
 
             @Override
             public void onChildRemoved(@NonNull @NotNull DataSnapshot snapshot) {
-                vegetableRVadaptor.notifyDataSetChanged();
+                adminviewvegetableRVadaptor.notifyDataSetChanged();
             }
 
             @Override
             public void onChildMoved(@NonNull @NotNull DataSnapshot snapshot,  String previousChildName) {
-                vegetableRVadaptor.notifyDataSetChanged();
+                adminviewvegetableRVadaptor.notifyDataSetChanged();
             }
 
             @Override
@@ -95,24 +95,23 @@ public class VIEWVEG extends AppCompatActivity implements vegetableRVadaptor.veg
 
     private void displayborromsheet(vegetable vegetable){
         final BottomSheetDialog bottomSheetDialog=new BottomSheetDialog(this);
-        View layout= LayoutInflater.from(this).inflate(R.layout.supvegselect,bottomsheetRL);
+        View layout= LayoutInflater.from(this).inflate(R.layout.activity_adminviewveg,bottomsheetRL);
         bottomSheetDialog.setContentView(layout);
         bottomSheetDialog.show();
         bottomSheetDialog.getBehavior().setState(BottomSheetBehavior.STATE_EXPANDED);
 
-        TextView Vname=layout.findViewById(R.id.Iveg_name);
-        TextView Vprice=layout.findViewById(R.id.Iveg_price);
-        Button selectBtn = layout.findViewById(R.id.Cart_btn);
-        ImageView Image = layout.findViewById(R.id.pveg_image);
+        TextView Vname=layout.findViewById(R.id.idfname);
+        TextView Vprice=layout.findViewById(R.id.idfprice);
+        Button editBtn = layout.findViewById(R.id.editvegbutton);
 
 
         Vname.setText(vegetable.getVname());
         Vprice.setText(vegetable.getVprice());
 
-        selectBtn.setOnClickListener(new View.OnClickListener() {
+        editBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(VIEWVEG.this,SupplierActivity3.class);
+                Intent intent = new Intent(ADMINVIEWVEGETABLES.this,SupplierActivity3.class);
                 startActivity(intent);
             }
         });
