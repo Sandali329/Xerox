@@ -15,6 +15,7 @@ import com.example.xerox.classes.SupOrder;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
+import com.squareup.picasso.Picasso;
 
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
@@ -50,6 +51,7 @@ public class SupplierActivity3 extends AppCompatActivity {
         fruitRef = DB.getReference("Fruits");
         fruit = getIntent().getParcelableExtra("fruits");
 
+        ImageView Image = findViewById(R.id.p_image);
         Fname = findViewById(R.id.I_name);
         Fprice = findViewById(R.id.I_price);
         Qty = findViewById(R.id.et_qty);
@@ -57,8 +59,9 @@ public class SupplierActivity3 extends AppCompatActivity {
 
 
         if (fruit != null) {
+            Picasso.get().load(fruit.getFimglink()).into(Image);
             Fname.setText(fruit.getFname());
-            Fprice.setText(fruit.getFprice());
+            Fprice.setText(fruit.getFprice() +"/ 250g");
         }
 
                 addToCart();
@@ -106,21 +109,19 @@ public class SupplierActivity3 extends AppCompatActivity {
     }
 
     //Quantity increment
-    public void increment(View v){
-        no = Integer.parseInt(String.valueOf(Qty));
-        if(count>=0){
-            count++;
-            Qty.setText(count);
-        }
+    public void incrementQty(View v){
+        count++;
+        Qty.setText("" +count);
     }
 
     //Quantity decrement
-    public void decrement(View v){
-        no = Integer.parseInt(String.valueOf(Qty));
-        if(count>=0){
+    public void decrementQty(View v){
+        if(count<=0){
+            count = 0;
+        }else {
             count--;
-            Qty.setText(count);
         }
+        Qty.setText("" +count);
     }
 
 
