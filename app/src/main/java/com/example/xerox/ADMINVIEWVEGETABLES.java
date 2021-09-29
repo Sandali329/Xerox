@@ -111,7 +111,8 @@ public class ADMINVIEWVEGETABLES extends AppCompatActivity implements adminviewv
         editBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(ADMINVIEWVEGETABLES.this,SupplierActivity3.class);
+                Intent intent = new Intent(ADMINVIEWVEGETABLES.this,UPDATEVEG.class);
+                intent.putExtra("vegetables",vegetable);
                 startActivity(intent);
             }
         });
