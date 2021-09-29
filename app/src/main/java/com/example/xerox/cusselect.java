@@ -14,7 +14,14 @@ public class cusselect extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_cusselect);
 
-
+veg=(Button)findViewById(R.id.btnbuy_veg);
+veg.setOnClickListener(new View.OnClickListener() {
+    @Override
+    public void onClick(View view) {
+        Intent intent2 = new Intent(cusselect.this, BUYVEG.class);
+        startActivity(intent2);
+    }
+});
         fruits=(Button)findViewById(R.id.btnbuy_fruits);
 
         fruits.setOnClickListener(new View.OnClickListener() {

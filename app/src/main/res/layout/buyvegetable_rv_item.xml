@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="300dp"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_gravity="center"
+    android:layout_margin="5dp"
+    app:cardCornerRadius="4dp"
+    app:cardElevation="3dp">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white">
+
+
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:id="@+id/idIVvegetable"
+            android:scaleType="fitCenter"
+            />
+
+        <TextView
+            android:id="@+id/idvname"
+            android:layout_width="139dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/idIVvegetable"
+            android:layout_marginStart="3dp"
+            android:layout_marginLeft="3dp"
+            android:layout_marginEnd="3dp"
+            android:layout_marginRight="3dp"
+            android:layout_marginBottom="3dp"
+            android:padding="4dp"
+            android:singleLine="true"
+            android:text="Vegetable Name"
+            android:textColor="@color/black"
+            android:textSize="20dp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/idvcusprice"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="3dp"
+            android:layout_below="@id/idIVvegetable"
+            android:padding="4dp"
+            android:text="Vegetable Price"
+            android:textSize="20dp"
+            android:singleLine="true"
+            android:textColor="@color/black"
+            android:textStyle="bold"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true" />
+
+
+    </RelativeLayout>
+
+</androidx.cardview.widget.CardView>
