@@ -102,12 +102,15 @@ public class ADMINVIEWVEGETABLES extends AppCompatActivity implements adminviewv
 
         TextView Vname=layout.findViewById(R.id.idfname);
         TextView Vprice=layout.findViewById(R.id.idfprice);
+        TextView Vcusprice=layout.findViewById(R.id.idfcusprice);
+        ImageView Vimg=layout.findViewById(R.id.idfimg);
         Button editBtn = layout.findViewById(R.id.editvegbutton);
 
 
         Vname.setText(vegetable.getVname());
-        Vprice.setText(vegetable.getVprice());
-
+        Vprice.setText("Supplier Price: "+vegetable.getVprice());
+Vcusprice.setText("Customer Price: "+vegetable.getVcusprice());
+        Picasso.get().load(vegetable.getVimglink()).into(Vimg);
         editBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

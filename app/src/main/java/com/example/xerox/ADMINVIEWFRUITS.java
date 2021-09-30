@@ -11,6 +11,7 @@ import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.widget.Button;
+import android.widget.ImageView;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 
@@ -21,6 +22,7 @@ import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
+import com.squareup.picasso.Picasso;
 
 import org.jetbrains.annotations.NotNull;
 
@@ -96,10 +98,12 @@ public class ADMINVIEWFRUITS extends AppCompatActivity implements adminviewfruit
         bottomSheetDialog.getBehavior().setState(BottomSheetBehavior.STATE_EXPANDED);
         TextView Fname=layout.findViewById(R.id.idfname);
         TextView Fprice=layout.findViewById(R.id.idfprice);
-
+        TextView Fcusprice=layout.findViewById(R.id.idfcusprice);
+        ImageView Fimg=layout.findViewById(R.id.idfimg);
+        Picasso.get().load(fruit.getFimglink()).into(Fimg);
         Fname.setText(fruit.getFname());
-        Fprice.setText(fruit.getFprice());
-
+        Fprice.setText("Supplier Price: "+fruit.getFprice());
+Fcusprice.setText("Customer Price: "+fruit.getFcusprice());
         Button updatebtn=layout.findViewById(R.id.editbutton);
         updatebtn.setOnClickListener(new View.OnClickListener() {
             @Override
