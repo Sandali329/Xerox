@@ -66,10 +66,13 @@
         android:layout_marginLeft="170dp"
         android:layout_marginBottom="124dp"
         android:background="@color/black"
+        android:backgroundTint="@color/AppYellow"
         android:onClick="UPDATEFRUIT"
         android:padding="4dp"
         android:singleLine="true"
-        android:text="Update" />
+        android:text="Update"
+        android:textColor="@color/black"
+        app:backgroundTint="@color/AppYellow" />
 
     <ImageView
         android:id="@+id/idfimg"
