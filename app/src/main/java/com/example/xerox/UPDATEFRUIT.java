@@ -26,9 +26,9 @@ public class UPDATEFRUIT extends AppCompatActivity {
 
     public Button updatefruit, deletefruit;
 
-    private EditText fcode, fname, fprice,fcusprice,fimglink;
+    private EditText fupdatecode, fupdatename, fupdateprice,fupdatecusprice,fupdateimglink;
     private FirebaseDatabase db;
-    DatabaseReference fruitref;
+    DatabaseReference fruitrefupdate;
 private fruit fruit;
 private String Fcode;
     @Override
@@ -37,34 +37,34 @@ private String Fcode;
         setContentView(R.layout.activity_updatefruit);
 db=FirebaseDatabase.getInstance();
 
-        fcode = findViewById(R.id.Fcode);
-        fname = findViewById(R.id.Fname);
-        fprice = findViewById(R.id.Fprice);
-        fcusprice=findViewById(R.id.Fcusprice);
-        fimglink=findViewById(R.id.Fimglink);
+        fupdatecode = findViewById(R.id.Fupdatecode);
+        fupdatename = findViewById(R.id.Fupdatename);
+        fupdateprice = findViewById(R.id.Fupdateprice);
+        fupdatecusprice=findViewById(R.id.Fupdatecusprice);
+        fupdateimglink=findViewById(R.id.Fupdateimglink);
         updatefruit = findViewById(R.id.updateFbtn);
         deletefruit=findViewById(R.id.deleteFbtn);
 
 fruit=getIntent().getParcelableExtra("fruits");
 if(fruit!=null){
 
-    fcode.setText(fruit.getFcode());
-    fname.setText(fruit.getFname());
-    fprice.setText(fruit.getFprice());
-    fcusprice.setText(fruit.getFcusprice());
-    fimglink.setText(fruit.getFimglink());
+    fupdatecode.setText(fruit.getFcode());
+    fupdatename.setText(fruit.getFname());
+    fupdateprice.setText(fruit.getFprice());
+    fupdatecusprice.setText(fruit.getFcusprice());
+    fupdateimglink.setText(fruit.getFimglink());
     Fcode=fruit.getFcode();
 }
 
-        fruitref=db.getReference("Fruits").child(Fcode);
+        fruitrefupdate=db.getReference("Fruits").child(Fcode);
 updatefruit.setOnClickListener(new View.OnClickListener() {
     @Override
     public void onClick(View view) {
-        String Fcode = fcode.getText().toString();
-        String Fname = fname.getText().toString();
-        String Fprice = fprice.getText().toString();
-        String Fcusprice=fcusprice.getText().toString();
-        String Fimglink=fimglink.getText().toString();
+        String Fcode = fupdatecode.getText().toString();
+        String Fname = fupdatename.getText().toString();
+        String Fprice = fupdateprice.getText().toString();
+        String Fcusprice=fupdatecusprice.getText().toString();
+        String Fimglink=fupdateimglink.getText().toString();
 
         Map<String,Object>map=new HashMap<>();
         map.put("fcode",Fcode);
@@ -73,10 +73,10 @@ updatefruit.setOnClickListener(new View.OnClickListener() {
         map.put("fcusprice",Fcusprice);
         map.put("fimglink",Fimglink);
 
-        fruitref.addValueEventListener(new ValueEventListener() {
+        fruitrefupdate.addListenerForSingleValueEvent(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull @NotNull DataSnapshot snapshot) {
-                fruitref.updateChildren(map);
+                fruitrefupdate.updateChildren(map);
                 Toast.makeText(UPDATEFRUIT.this, "Updated Successfully", Toast.LENGTH_SHORT).show();
             startActivity(new Intent(UPDATEFRUIT.this,ADMINVIEWFRUITS.class));
             }
@@ -98,7 +98,7 @@ deletefruit.setOnClickListener(new View.OnClickListener() {
     }
     private void deletefruit(){
 
-        fruitref.removeValue();
+        fruitrefupdate.removeValue();
         Toast.makeText(this, "Fruit Deleted", Toast.LENGTH_SHORT).show();
         startActivity(new Intent(UPDATEFRUIT.this,ADMINVIEWFRUITS.class));
     }

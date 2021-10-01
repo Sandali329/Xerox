@@ -73,7 +73,7 @@ public class UPDATEVEG extends AppCompatActivity {
                 map.put("vcusprice",Vcusprice);
                 map.put("vimglink",Vimglink);
 
-                fruitref.addValueEventListener(new ValueEventListener() {
+                fruitref.addListenerForSingleValueEvent(new ValueEventListener() {
                     @Override
                     public void onDataChange(@NonNull @NotNull DataSnapshot snapshot) {
                         fruitref.updateChildren(map);
