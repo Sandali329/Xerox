@@ -12,7 +12,7 @@ import android.widget.Toast;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 
 public class SupplierActivity1 extends AppCompatActivity {
-    EditText et_supName;
+    private  EditText et_supName;
     String name;
     FloatingActionButton cart;
 
@@ -26,17 +26,9 @@ public class SupplierActivity1 extends AppCompatActivity {
         cart = findViewById(R.id.cart_btn);
         et_supName = findViewById(R.id.et_supName);
 
-        Intent start = getIntent();
-        name = start.getStringExtra("sendName");
+        Intent i = getIntent();
+        name = i.getStringExtra("sname");
         et_supName.setText(name);
-        veg=findViewById(R.id.btn_veg);
-        veg.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent intent1 = new Intent(SupplierActivity1.this,VIEWVEG.class);
-                startActivity(intent1);
-            }
-        });
 
     }
 
