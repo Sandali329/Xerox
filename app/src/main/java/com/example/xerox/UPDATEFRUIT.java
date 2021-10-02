@@ -8,6 +8,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ImageButton;
 import android.widget.Toast;
 
 import com.google.firebase.database.DataSnapshot;
@@ -31,10 +32,23 @@ public class UPDATEFRUIT extends AppCompatActivity {
     DatabaseReference fruitrefupdate;
 private fruit fruit;
 private String Fcode;
+    private ImageButton adminbackbtn;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_updatefruit);
+
+
+        adminbackbtn=findViewById(R.id.Ibtn_backadmin);
+        adminbackbtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent i =new Intent(UPDATEFRUIT.this,Adminpage.class);
+                startActivity(i);
+            }
+        });
+
+
 db=FirebaseDatabase.getInstance();
 
         fupdatecode = findViewById(R.id.Fupdatecode);
@@ -44,6 +58,8 @@ db=FirebaseDatabase.getInstance();
         fupdateimglink=findViewById(R.id.Fupdateimglink);
         updatefruit = findViewById(R.id.updateFbtn);
         deletefruit=findViewById(R.id.deleteFbtn);
+
+
 
 fruit=getIntent().getParcelableExtra("fruits");
 if(fruit!=null){

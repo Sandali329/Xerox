@@ -8,6 +8,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ImageButton;
 import android.widget.Toast;
 
 import com.google.firebase.database.DataSnapshot;
@@ -31,10 +32,24 @@ public class UPDATEVEG extends AppCompatActivity {
     DatabaseReference fruitref;
     private vegetable vegetable;
     private String Vcode;
+    private ImageButton adminbackbtn;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_updateveg);
+
+
+        adminbackbtn=findViewById(R.id.Ibtn_backadmin);
+        adminbackbtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent i =new Intent(UPDATEVEG.this,Adminpage.class);
+                startActivity(i);
+            }
+        });
+
+
+
         db=FirebaseDatabase.getInstance();
 
         vcode = findViewById(R.id.Vcode);

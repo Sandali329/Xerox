@@ -11,6 +11,7 @@ import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.widget.Button;
+import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
@@ -36,6 +37,7 @@ public class ADMINVIEWFRUITS extends AppCompatActivity implements adminviewfruit
     private ArrayList<fruit>fruitarraylist;
     private RelativeLayout viewfruitRL,bottomsheetRL;
     private adminviewfruitRVadaptor adminviewfruitRVadaptor;
+    private ImageButton adminbackbtn;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -46,7 +48,14 @@ public class ADMINVIEWFRUITS extends AppCompatActivity implements adminviewfruit
         fruitref=FirebaseDatabase.getInstance().getReference("Fruits");
         fruitarraylist=new ArrayList<>();
         viewfruitRL=findViewById(R.id.idRLadminviewfruits);
-
+adminbackbtn=findViewById(R.id.Ibtn_backadmin);
+adminbackbtn.setOnClickListener(new View.OnClickListener() {
+    @Override
+    public void onClick(View view) {
+        Intent i =new Intent(ADMINVIEWFRUITS.this,Adminpage.class);
+        startActivity(i);
+    }
+});
         bottomsheetRL=findViewById(R.id.bottomsheetid);
 
         adminviewfruitRVadaptor=new adminviewfruitRVadaptor(fruitarraylist,this,this);

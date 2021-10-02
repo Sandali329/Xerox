@@ -10,7 +10,40 @@
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/idRVadminviewfruits"
         android:layout_width="match_parent"
-        android:layout_height="match_parent" />
+        android:layout_height="667dp"
+        android:layout_below="@+id/toolbar4"
+        android:layout_marginTop="5dp" />
 
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar4"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="?attr/colorPrimary"
+        android:backgroundTint="@color/AppYellow"
+        android:minHeight="?attr/actionBarSize"
+        android:theme="?attr/actionBarTheme"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <ImageButton
+        android:id="@+id/Ibtn_backadmin"
+        android:layout_width="86dp"
+        android:layout_height="60dp"
+        android:backgroundTint="@color/AppYellow"
+
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="?attr/actionModeCloseDrawable" />
+
+    <TextView
+        android:id="@+id/textView4"
+        android:layout_width="152dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="150dp"
+        android:text="Fruits"
+        android:textColor="@color/black"
+        android:textSize="30sp"
+        android:textStyle="italic" />
 </RelativeLayout>
 

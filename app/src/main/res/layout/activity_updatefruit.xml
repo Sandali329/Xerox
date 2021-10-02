@@ -44,7 +44,15 @@
             app:layout_constraintHorizontal_bias="0.361"
             app:layout_constraintStart_toStartOf="@+id/toolbar2"
             app:layout_constraintTop_toTopOf="@+id/toolbar2" />
+        <ImageButton
+            android:id="@+id/Ibtn_backadmin"
+            android:layout_width="86dp"
+            android:layout_height="60dp"
+            android:backgroundTint="@color/AppYellow"
 
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="?attr/actionModeCloseDrawable" />
         <EditText
             android:id="@+id/Fupdatename"
             android:layout_width="wrap_content"
