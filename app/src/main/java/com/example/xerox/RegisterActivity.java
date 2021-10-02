@@ -46,7 +46,8 @@ public class RegisterActivity extends AppCompatActivity {
 
         registerBtn.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onClick(View v) {
+            public void onClick(View v)
+            {
                 CreateAccount();
             }
         });
@@ -86,13 +87,13 @@ public class RegisterActivity extends AppCompatActivity {
         }
         else
         {
-            validateEmail(name, phone, email, password);
+            validatePhoneNo(name, phone, email, password);
         }
     }
 
 
     //insert supplier details
-    private void validateEmail(String name, String phone, String email, String password) {
+    private void validatePhoneNo(String name, String phone, String email, String password) {
         final DatabaseReference RootRef;
         RootRef = FirebaseDatabase.getInstance().getReference();
 
@@ -100,7 +101,7 @@ public class RegisterActivity extends AppCompatActivity {
             @Override
             public void onDataChange(@NonNull  DataSnapshot snapshot)
             {
-                if(!(snapshot.child("RegSuppliers").child(email).exists()))
+                if(!(snapshot.child("RegSuppliers").child(phone).exists()))
                 {
                     HashMap<String, Object> supdataMap = new HashMap<>();
                     supdataMap.put("name", name);

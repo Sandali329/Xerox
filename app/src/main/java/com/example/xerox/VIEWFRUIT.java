@@ -113,8 +113,12 @@ public class VIEWFRUIT extends AppCompatActivity implements fruitRVadaptor.fruit
         selectBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                /*Intent intent = new Intent(VIEWFRUIT.this,SupplierActivity3.class);
+                intent.putExtra("fruit",fruit);
+                startActivity(intent);*/
+
                 Intent intent = new Intent(VIEWFRUIT.this,SupplierActivity3.class);
-                intent.putExtra("fruits",fruit);
+                intent.putExtra("fcode",fruit.getFcode());
                 startActivity(intent);
             }
         });

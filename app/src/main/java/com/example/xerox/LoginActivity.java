@@ -29,6 +29,8 @@ public class LoginActivity extends AppCompatActivity {
     private ProgressDialog loadingBar;
     private String name;
 
+    private String parentDbName = "RegSuppliers";
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -84,9 +86,9 @@ public class LoginActivity extends AppCompatActivity {
         RootRef.addListenerForSingleValueEvent(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull @NotNull DataSnapshot snapshot) {
-                if(snapshot.child("RegSuppliers").child(phone).exists())
+                if(snapshot.child(parentDbName).child(phone).exists())
                 {
-                    RegSuppliers supData = snapshot.child("RegSuppliers").child(phone).getValue(RegSuppliers.class);
+                    RegSuppliers supData = snapshot.child(parentDbName).child(phone).getValue(RegSuppliers.class);
 
                     if(supData.getPhone().equals(phone))
                     {
@@ -98,7 +100,6 @@ public class LoginActivity extends AppCompatActivity {
                             name = supData.getName();
                             i.putExtra("sname",name);
                             startActivity(i);
-
 
                         }
                         else
