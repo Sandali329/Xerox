@@ -45,9 +45,6 @@ public class SupplierCartActivity4 extends AppCompatActivity {
     private ImageView emptyCart;
 
     private int netTotal = 0;
-    /*private int q;
-    private int p;
-    private int oneTotal;*/
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -63,6 +60,7 @@ public class SupplierCartActivity4 extends AppCompatActivity {
         total = (TextView) findViewById(R.id.price);
         emptyCart = (ImageView) findViewById(R.id.emptyCart);
 
+        //total.setText(String.valueOf(netTotal));
         confirm.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -98,6 +96,7 @@ public class SupplierCartActivity4 extends AppCompatActivity {
 
                 int oneProductTotal = ((Integer.valueOf(model.getFprice())) * Integer.valueOf(model.getQuantity()) );
                 netTotal = netTotal + oneProductTotal;
+                total.setText("Total Price = Rs."+String.valueOf(netTotal));
 
                 holder.itemView.setOnClickListener(new View.OnClickListener() {
                     @Override

@@ -4,9 +4,11 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.text.TextUtils;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.google.firebase.database.DatabaseReference;
@@ -18,6 +20,8 @@ public class CusRegister extends AppCompatActivity {
     Button btn_Creg,btn_show;
     Customer CusObj;
     DatabaseReference dbref;
+    TextView login;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -29,11 +33,17 @@ public class CusRegister extends AppCompatActivity {
         etphone = (EditText) findViewById(R.id.et_phone);
         etemail = (EditText) findViewById(R.id.et_email);
         etpassword = (EditText) findViewById(R.id.et_password);
+
         btn_Creg = (Button) findViewById(R.id.btn_Creg);
         btn_show=(Button) findViewById(R.id.btn_show);
+        login = (TextView) findViewById(R.id.TvCusLogin);
+
+
 
         CusObj = new Customer();
     }
+
+
 
 
     public void clearControls(){
@@ -70,8 +80,18 @@ public class CusRegister extends AppCompatActivity {
             }
         });
 
+        login.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i = new Intent(CusRegister.this,cusselect.class);
+                startActivity(i);
+            }
+        });
+
 
     }
+
+
 
 
 

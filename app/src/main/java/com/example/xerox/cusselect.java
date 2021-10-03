@@ -8,14 +8,17 @@ import android.view.View;
 import android.widget.Button;
 
 public class cusselect extends AppCompatActivity {
-    Button fruits, veg;
+    Button fruits, veg, viewCart;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_cusselect);
 
-veg=(Button)findViewById(R.id.btnbuy_veg);
-veg.setOnClickListener(new View.OnClickListener() {
+
+        veg=(Button)findViewById(R.id.btnbuy_veg);
+        viewCart=(Button)findViewById(R.id.viewCart);
+
+        veg.setOnClickListener(new View.OnClickListener() {
     @Override
     public void onClick(View view) {
         Intent intent2 = new Intent(cusselect.this, BUYVEG.class);
@@ -28,6 +31,14 @@ veg.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 Intent intent2 = new Intent(cusselect.this, BUYFRUIT.class);
+                startActivity(intent2);
+            }
+        });
+
+        viewCart.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent2 = new Intent(cusselect.this, CusCartView.class);
                 startActivity(intent2);
             }
         });

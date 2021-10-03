@@ -11,6 +11,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
@@ -36,12 +37,21 @@ public class ADMINVIEWVEGETABLES extends AppCompatActivity implements adminviewv
     private ArrayList<vegetable>vegetablearraylist;
     private RelativeLayout viewvegetableRL,bottomsheetRL;
     private adminviewvegetableRVadaptor adminviewvegetableRVadaptor;
-
+    private ImageButton adminbackbtn;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.adminviewveg);
+
+        adminbackbtn=findViewById(R.id.Ibtn_backadmin);
+        adminbackbtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent i =new Intent(ADMINVIEWVEGETABLES.this,Adminpage.class);
+                startActivity(i);
+            }
+        });
 
         adminvegetableRV=findViewById(R.id.idRVadminviewvegetables);
         db=FirebaseDatabase.getInstance();
@@ -102,12 +112,15 @@ public class ADMINVIEWVEGETABLES extends AppCompatActivity implements adminviewv
 
         TextView Vname=layout.findViewById(R.id.idfname);
         TextView Vprice=layout.findViewById(R.id.idfprice);
+        TextView Vcusprice=layout.findViewById(R.id.idfcusprice);
+        ImageView Vimg=layout.findViewById(R.id.idfimg);
         Button editBtn = layout.findViewById(R.id.editvegbutton);
 
 
         Vname.setText(vegetable.getVname());
-        Vprice.setText(vegetable.getVprice());
-
+        Vprice.setText("Supplier Price: "+vegetable.getVprice());
+Vcusprice.setText("Customer Price: "+vegetable.getVcusprice());
+        Picasso.get().load(vegetable.getVimglink()).into(Vimg);
         editBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

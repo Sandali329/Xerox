@@ -22,4 +22,16 @@ public class Rider {
     public String getPhone() {
         return phone;
     }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public void setEmail(String email) {
+        this.email = email;
+    }
+
+    public void setPhone(String phone) {
+        this.phone = phone;
+    }
 }

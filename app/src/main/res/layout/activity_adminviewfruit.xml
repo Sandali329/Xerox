@@ -14,7 +14,7 @@
             android:id="@+id/idfname"
             android:layout_width="139dp"
             android:layout_height="wrap_content"
-
+            android:layout_below="@id/idfimg"
             android:layout_marginStart="3dp"
             android:layout_marginLeft="3dp"
             android:layout_marginEnd="3dp"
@@ -31,9 +31,8 @@
             android:id="@+id/idfprice"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_alignParentEnd="true"
-            android:layout_alignParentRight="true"
             android:layout_margin="3dp"
+            android:layout_below="@id/idfname"
             android:padding="4dp"
             android:singleLine="true"
             android:text="Fruit Price"
@@ -41,18 +40,44 @@
             android:textSize="20dp"
             android:textStyle="bold" />
 
-        <Button
-            android:id="@+id/editbutton"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignParentBottom="true"
-            android:layout_marginLeft="40dp"
-            android:background="@color/black"
-            android:onClick="UPDATEFRUIT"
-            android:layout_marginBottom="200dp"
-            android:padding="4dp"
-            android:singleLine="true"
-            android:text="Update" />
+    <TextView
+        android:id="@+id/idfcusprice"
+        android:layout_width="wrap_content"
+        android:layout_height="47dp"
+        android:layout_below="@id/idfprice"
+        android:layout_marginStart="3dp"
+        android:layout_marginLeft="3dp"
+        android:layout_marginTop="-5dp"
+        android:layout_marginEnd="3dp"
+        android:layout_marginRight="3dp"
+        android:layout_marginBottom="3dp"
+        android:padding="4dp"
+        android:singleLine="true"
+        android:text="Fruit CUSTOMER Price"
+        android:textColor="@color/black"
+        android:textSize="20dp"
+        android:textStyle="bold" />
 
-    </RelativeLayout>
+    <Button
+        android:id="@+id/editbutton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginLeft="170dp"
+        android:layout_marginBottom="124dp"
+        android:background="@color/black"
+        android:backgroundTint="@color/AppYellow"
+        android:onClick="UPDATEFRUIT"
+        android:padding="4dp"
+        android:singleLine="true"
+        android:text="Update"
+        android:textColor="@color/black"
+        app:backgroundTint="@color/AppYellow" />
+
+    <ImageView
+        android:id="@+id/idfimg"
+        android:layout_width="match_parent"
+        android:layout_height="421dp" />
+
+</RelativeLayout>
 

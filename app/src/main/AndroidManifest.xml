@@ -31,15 +31,18 @@
         <activity android:name=".itemDetailsActivity" />
         <activity android:name=".SupplierActivity3" />
         <activity android:name=".SupplierCartActivity4" />
-        <activity android:name=".SupProductsActivity" />
+        <activity android:name=".adminlogin"/>
         <activity android:name=".SupSelectItemActivity" />
         <activity android:name=".placeOrder"></activity>
+        <activity android:name=".view_rider"/>
+       <activity android:name=".delivery_address"/>
         <activity android:name=".Payment" />
         <activity android:name=".order_successfull" />
         <activity android:name=".cash_on_delivery" />
         <activity android:name=".Card_details" />
         <activity android:name=".DisplayActivity" />
         <activity android:name=".CusRegister" />
+        <activity android:name=".CusCartView"/>
         <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

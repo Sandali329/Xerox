@@ -7,7 +7,7 @@
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        tools:context=".ADDFRUIT">
+        tools:context=".UPDATEFRUIT">
 
         <androidx.appcompat.widget.Toolbar
             android:id="@+id/toolbar2"
@@ -44,9 +44,17 @@
             app:layout_constraintHorizontal_bias="0.361"
             app:layout_constraintStart_toStartOf="@+id/toolbar2"
             app:layout_constraintTop_toTopOf="@+id/toolbar2" />
+        <ImageButton
+            android:id="@+id/Ibtn_backadmin"
+            android:layout_width="86dp"
+            android:layout_height="60dp"
+            android:backgroundTint="@color/AppYellow"
 
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="?attr/actionModeCloseDrawable" />
         <EditText
-            android:id="@+id/Fname"
+            android:id="@+id/Fupdatename"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="50dp"
@@ -57,7 +65,7 @@
             app:layout_constraintTop_toBottomOf="@+id/textView11" />
 
         <EditText
-            android:id="@+id/Fprice"
+            android:id="@+id/Fupdateprice"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="50dp"
@@ -104,7 +112,7 @@
             android:textSize="17sp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/Fcode" />
+            app:layout_constraintTop_toBottomOf="@+id/Fupdatecode" />
 
         <TextView
             android:id="@+id/textView12"
@@ -118,7 +126,7 @@
             android:textColor="@color/black"
             android:textSize="17sp"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/Fname" />
+            app:layout_constraintTop_toBottomOf="@+id/Fupdatename" />
 
         <TextView
             android:id="@+id/textView13"
@@ -135,7 +143,7 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/Fcusprice" />
+            app:layout_constraintTop_toBottomOf="@+id/Fupdatecusprice" />
 
         <Button
             android:id="@+id/updateFbtn"
@@ -154,7 +162,7 @@
             app:layout_constraintEnd_toStartOf="@+id/deleteFbtn"
             app:layout_constraintHorizontal_bias="0.074"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/Fimglink" />
+            app:layout_constraintTop_toBottomOf="@+id/Fupdateimglink" />
 
         <Button
             android:id="@+id/deleteFbtn"
@@ -172,7 +180,7 @@
             app:layout_constraintStart_toEndOf="@+id/updateFbtn" />
 
         <EditText
-            android:id="@+id/Fcode"
+            android:id="@+id/Fupdatecode"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="48dp"
@@ -184,7 +192,7 @@
             app:layout_constraintTop_toBottomOf="@+id/textView2" />
 
         <EditText
-            android:id="@+id/Fcusprice"
+            android:id="@+id/Fupdatecusprice"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginEnd="151dp"
@@ -197,7 +205,7 @@
             app:layout_constraintTop_toBottomOf="@+id/textView16" />
 
         <EditText
-            android:id="@+id/Fimglink"
+            android:id="@+id/Fupdateimglink"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginEnd="160dp"
@@ -220,7 +228,7 @@
             android:textColor="@color/black"
             android:textSize="17sp"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/Fprice" />
+            app:layout_constraintTop_toBottomOf="@+id/Fupdateprice" />
 
 
     </androidx.constraintlayout.widget.ConstraintLayout>

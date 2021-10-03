@@ -25,6 +25,9 @@ public class placeOrder extends AppCompatActivity {
         address = findViewById(R.id.address);
         amount = findViewById(R.id.amount);
 
+
+
+
         final Intent intent = new Intent(this, cash_on_delivery.class);
 
         String itemName = itemname.getText().toString();

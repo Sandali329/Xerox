@@ -9,17 +9,40 @@ import android.widget.Button;
 
 public class Adminpage extends AppCompatActivity {
 
-    Button fruit,veg,addfruit,addriders;
+    Button fruit,veg,addfruit,addveg, rider;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_adminpage);
+        veg=findViewById(R.id.adminveg);
+        addfruit=findViewById(R.id.adminaddfruit);
+        addveg=findViewById(R.id.adminaddvegetable);
+        rider=findViewById(R.id.adminRiders);
 
-        addriders = findViewById(R.id.adminRiders);
+        addveg.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent2 = new Intent(Adminpage.this, ADDVEG.class);
+                startActivity(intent2);
+            }
+        });
 
+        rider.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent2 = new Intent(Adminpage.this, addriders.class);
+                startActivity(intent2);
+            }
+        });
 
-addfruit=findViewById(R.id.adminaddfruit);
         fruit=findViewById(R.id.adminfruit);
+        veg.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent2 = new Intent(Adminpage.this, ADMINVIEWVEGETABLES.class);
+                startActivity(intent2);
+            }
+        });
         fruit.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -32,15 +55,6 @@ addfruit=findViewById(R.id.adminaddfruit);
             public void onClick(View view) {
                 Intent intent2 = new Intent(Adminpage.this, ADDFRUIT.class);
                 startActivity(intent2);
-            }
-        });
-
-
-        addriders.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent3 = new Intent(Adminpage.this, addriders.class);
-                startActivity(intent3);
             }
         });
     }

@@ -39,10 +39,20 @@ public class Card_details extends AppCompatActivity {
 
         pay.setOnClickListener(new View.OnClickListener() {
             @Override
-
             public void onClick(View v) { insertCardData();}
+
+        });
+
+        pay.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(getApplicationContext(), order_successfull.class);
+                startActivity(intent);
+            }
         });
     }
+
+
 
     private void insertCardData(){
 

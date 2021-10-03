@@ -2,6 +2,7 @@ package com.example.xerox;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -17,6 +18,7 @@ public class addriders extends AppCompatActivity {
     EditText email;
     EditText phone;
     Button add;
+    Button view;
 
     DatabaseReference adddataRef;
 
@@ -29,6 +31,7 @@ public class addriders extends AppCompatActivity {
         email = findViewById(R.id.email);
         phone = findViewById(R.id.phone);
         add = findViewById(R.id.add);
+        view = findViewById(R.id.view);
 
         adddataRef = FirebaseDatabase.getInstance().getReference().child("Rider");
         
@@ -38,8 +41,18 @@ public class addriders extends AppCompatActivity {
                 insertRiderData();
             }
         });
+
+        view.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(getApplicationContext(), view_rider.class);
+                startActivity(intent);
+            }
+        });
     }
-    
+
+
+
     private void insertRiderData(){
         String Name = name.getText().toString();
         String Email = email.getText().toString();
@@ -52,5 +65,5 @@ public class addriders extends AppCompatActivity {
         toast.show();
         
     }
-    
+
 }
