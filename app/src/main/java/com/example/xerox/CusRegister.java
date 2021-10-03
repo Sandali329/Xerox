@@ -66,7 +66,7 @@ public class CusRegister extends AppCompatActivity {
 
                 dbref.push().setValue(CusObj);
                 Intent intent = new Intent(CusRegister.this,cusselect.class);
-                Toast.makeText(CusRegister.this, "Successfully Registered customer", Toast.LENGTH_SHORT).show();
+                Toast.makeText(CusRegister.this, "Successfully Registered customer details", Toast.LENGTH_SHORT).show();
                 clearControls();
                 startActivity(intent);
             }
