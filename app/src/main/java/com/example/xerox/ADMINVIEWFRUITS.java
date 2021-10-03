@@ -44,12 +44,18 @@ public class ADMINVIEWFRUITS extends AppCompatActivity implements adminviewfruit
         setContentView(R.layout.adminviewfruits);
 
         fruitRV=findViewById(R.id.idRVadminviewfruits);
+
+        //retrieve data from db
+
+
         db=FirebaseDatabase.getInstance();
         fruitref=FirebaseDatabase.getInstance().getReference("Fruits");
+
+
         fruitarraylist=new ArrayList<>();
         viewfruitRL=findViewById(R.id.idRLadminviewfruits);
-adminbackbtn=findViewById(R.id.Ibtn_backadmin);
-adminbackbtn.setOnClickListener(new View.OnClickListener() {
+        adminbackbtn=findViewById(R.id.Ibtn_backadmin);
+        adminbackbtn.setOnClickListener(new View.OnClickListener() {
     @Override
     public void onClick(View view) {
         Intent i =new Intent(ADMINVIEWFRUITS.this,Adminpage.class);
