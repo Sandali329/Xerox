@@ -3,21 +3,31 @@ package com.example.xerox.classes;
 import java.util.Date;
 
 public class SupOrder {
+    private String fcode;
     private String fname;
     private String fprice;
-    private String  qty;
+    private String  quantity;
     private String date;
     private String time;
 
     public SupOrder() {
     }
 
-    public SupOrder(String fname, String fprice, String qty, String date, String time) {
+    public SupOrder(String fcode, String fname, String fprice, String quantity, String date, String time) {
+        this.fcode = fcode;
         this.fname = fname;
         this.fprice = fprice;
-        this.qty = qty;
+        this.quantity = quantity;
         this.date = date;
         this.time = time;
+    }
+
+    public String getFcode() {
+        return fcode;
+    }
+
+    public void setFcode(String fcode) {
+        this.fcode = fcode;
     }
 
     public String getFname() {
@@ -36,12 +46,12 @@ public class SupOrder {
         this.fprice = fprice;
     }
 
-    public String getQty() {
-        return qty;
+    public String getQuantity() {
+        return quantity;
     }
 
-    public void setQty(String qty) {
-        this.qty = qty;
+    public void setQuantity(String quantity) {
+        this.quantity = quantity;
     }
 
     public String getDate() {
@@ -59,5 +69,4 @@ public class SupOrder {
     public void setTime(String time) {
         this.time = time;
     }
-
 }

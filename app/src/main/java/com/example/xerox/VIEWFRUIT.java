@@ -108,7 +108,7 @@ public class VIEWFRUIT extends AppCompatActivity implements fruitRVadaptor.fruit
 
         Picasso.get().load(fruit.getFimglink()).into(Image);
         Fname.setText(fruit.getFname());
-        Fprice.setText(fruit.getFprice() + ".00/ 250g");
+        Fprice.setText(fruit.getFprice());
 
         selectBtn.setOnClickListener(new View.OnClickListener() {
             @Override

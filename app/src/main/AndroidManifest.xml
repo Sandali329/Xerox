@@ -9,13 +9,14 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.Xerox">
-        <activity android:name=".UPDATEVEG"></activity>
+        <activity android:name=".ConfirmSuporderActivity5"></activity>
+        <activity android:name=".UPDATEVEG" />
         <activity android:name=".Adminpage" />
         <activity android:name=".cusselect" />
         <activity android:name=".UPDATEFRUIT" />
         <activity android:name=".adminviewfruit" />
         <activity android:name=".VIEWFRUIT" />
-        <activity android:name=".addriders"/>
+        <activity android:name=".addriders" />
         <activity android:name=".ADMINVIEWFRUITS" />
         <activity android:name=".adminviewveg" />
         <activity android:name=".ADMINVIEWVEGETABLES" />
@@ -32,10 +33,7 @@
         <activity android:name=".SupplierCartActivity4" />
         <activity android:name=".SupProductsActivity" />
         <activity android:name=".SupSelectItemActivity" />
-        <activity android:name=".placeOrder" >
-
-
-        </activity>
+        <activity android:name=".placeOrder"></activity>
         <activity android:name=".Payment" />
         <activity android:name=".order_successfull" />
         <activity android:name=".cash_on_delivery" />

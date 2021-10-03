@@ -16,7 +16,6 @@ public class SupplierActivity1 extends AppCompatActivity {
     String name;
     FloatingActionButton cart;
 
-    Button fruits, veg;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -39,7 +38,7 @@ public class SupplierActivity1 extends AppCompatActivity {
     }
 
     public void VegPage(View view) {
-        Intent intent1 = new Intent(this,VIEWVEG.class);
+        Intent intent1 = new Intent(this,VIEWFRUIT.class);
         startActivity(intent1);
     }
 

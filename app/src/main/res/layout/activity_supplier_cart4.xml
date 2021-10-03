@@ -27,6 +27,16 @@
 
     </RelativeLayout>
 
+    <ImageView
+        android:id="@+id/emptyCart"
+        android:layout_width="wrap_content"
+        android:layout_height="273dp"
+        android:layout_centerVertical="true"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="10dp"
+        app:srcCompat="@drawable/empty1"
+        android:visibility="gone"/>
+
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/cart_recyView"
         android:layout_width="match_parent"
@@ -52,7 +62,6 @@
         android:textColor="@color/black"
         android:textSize="20dp"
         app:backgroundTint="#FFEB3B" />
-
 
 
 </RelativeLayout>
