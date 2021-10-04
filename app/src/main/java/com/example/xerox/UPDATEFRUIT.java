@@ -30,8 +30,8 @@ public class UPDATEFRUIT extends AppCompatActivity {
     private EditText fupdatecode, fupdatename, fupdateprice,fupdatecusprice,fupdateimglink;
     private FirebaseDatabase db;
     DatabaseReference fruitrefupdate;
-private fruit fruit;
-private String Fcode;
+private fruit fruit2;
+private String Fupdatecode;
     private ImageButton adminbackbtn;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -61,33 +61,33 @@ db=FirebaseDatabase.getInstance();
 
 
 
-fruit=getIntent().getParcelableExtra("fruits");
-if(fruit!=null){
+fruit2=getIntent().getParcelableExtra("fruits");
+if(fruit2!=null){
 
-    fupdatecode.setText(fruit.getFcode());
-    fupdatename.setText(fruit.getFname());
-    fupdateprice.setText(fruit.getFprice());
-    fupdatecusprice.setText(fruit.getFcusprice());
-    fupdateimglink.setText(fruit.getFimglink());
-    Fcode=fruit.getFcode();
+    fupdatecode.setText(fruit2.getFcode());
+    fupdatename.setText(fruit2.getFname());
+    fupdateprice.setText(fruit2.getFprice());
+    fupdatecusprice.setText(fruit2.getFcusprice());
+    fupdateimglink.setText(fruit2.getFimglink());
+    Fupdatecode=fruit2.getFcode();
 }
 
-        fruitrefupdate=db.getReference("Fruits").child(Fcode);
+        fruitrefupdate=db.getReference("Fruits").child(Fupdatecode);
 updatefruit.setOnClickListener(new View.OnClickListener() {
     @Override
     public void onClick(View view) {
-        String Fcode = fupdatecode.getText().toString();
-        String Fname = fupdatename.getText().toString();
-        String Fprice = fupdateprice.getText().toString();
-        String Fcusprice=fupdatecusprice.getText().toString();
-        String Fimglink=fupdateimglink.getText().toString();
+        String Fupdatecode = fupdatecode.getText().toString();
+        String Fupdatename = fupdatename.getText().toString();
+        String Fupdateprice = fupdateprice.getText().toString();
+        String Fupdatecusprice=fupdatecusprice.getText().toString();
+        String Fupdateimglink=fupdateimglink.getText().toString();
 
         Map<String,Object>map=new HashMap<>();
-        map.put("fcode",Fcode);
-        map.put("fname",Fname);
-        map.put("fprice",Fprice);
-        map.put("fcusprice",Fcusprice);
-        map.put("fimglink",Fimglink);
+        map.put("fcode",Fupdatecode);
+        map.put("fname",Fupdatename);
+        map.put("fprice",Fupdateprice);
+        map.put("fcusprice",Fupdatecusprice);
+        map.put("fimglink",Fupdateimglink);
 
         fruitrefupdate.addListenerForSingleValueEvent(new ValueEventListener() {
             @Override

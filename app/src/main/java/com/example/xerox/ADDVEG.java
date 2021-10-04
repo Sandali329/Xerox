@@ -70,7 +70,7 @@ public class ADDVEG extends AppCompatActivity {
                 String Vcusprice=vcusprice.getText().toString();
                 String Vimglink=vimglink.getText().toString();
                 vegetable vegetable = new vegetable(Vcode, Vname, Vprice,Vcusprice,Vimglink);
-                fruitref.addValueEventListener(new ValueEventListener() {
+                fruitref.addListenerForSingleValueEvent(new ValueEventListener() {
                     @Override
                     public void onDataChange(@NonNull DataSnapshot snapshot) {
                         fruitref.child(Vcode).setValue(vegetable);

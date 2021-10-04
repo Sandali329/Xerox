@@ -78,7 +78,7 @@ public class ADDFRUIT extends AppCompatActivity {
                 String Fcusprice=fcusprice.getText().toString();
                 String Fimglink=fimglink.getText().toString();
                 fruit fruit = new fruit(Fcode, Fname, Fprice,Fcusprice,Fimglink);
-                fruitref.addValueEventListener(new ValueEventListener() {
+                fruitref.addListenerForSingleValueEvent(new ValueEventListener() {
                     @Override
                     public void onDataChange(@NonNull DataSnapshot snapshot) {
                         fruitref.child(Fcode).setValue(fruit);
